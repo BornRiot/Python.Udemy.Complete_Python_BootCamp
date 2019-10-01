@@ -1,0 +1,10 @@
+Data Types in Python 
+Name                                      Type                     Description
+------                                     ----                    -------------
+Integers                                   int                     whole numbers such as 3, 300, 200 
+Floating Points                            float                   numbers with a decumal point (2.9,5.9, 330.76) 
+Strings                                    str                     Ordered sequence of characters ("sammy", "hello", "2000") Lists list ordered sequence of objects: [10, "hello", 200.3]
+Dictionaries                               dict                    Unordered key; value pairs: {"mykeys":"value", "name":"Frankie" } 
+Tuples                                     tup                     ordered immutable sequence of objects:(10, "hello", 200.3) 
+Sets                                       set                     un-ordered colletion of unique objects:("a", "b") 
+Booleans                                   bool                    logical value indicating t/d(True, False)
