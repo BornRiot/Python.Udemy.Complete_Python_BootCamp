@@ -1,0 +1,51 @@
+Environment Location: C:\DevEx\Miniconda3\Scripts\Python.Udemy.Complete_Python_BootCamp
+Environment name: Python
+Jupyter Notebook in same location
+
+"Command Line Basics"
+#######################
+To select the right directory without typing everything, use the tab but after typing the very first letter.
+Ex: "cd D" then use tab button.
+
+"Installing Python (Step by Step)"
+####################
+1. python was created by Guido van rossum in 1991
+2. python has a lot of open source libraries
+3. NumPy is used for numerical computing
+
+"Running Python Code"
+######################
+Several ways to run code
+
+3 main types of env
+    text editors
+        can be customize w/ plugins and addon's
+        sublime and atom are most popular
+
+    IDE's(Integrated Development Environment)
+        Most pop: PyCharm and Spyder
+    Notebook environments
+        great for learning
+        supports visualizations and videos
+        uses special file formats, not .py
+There are short notes in the Jupyter notebooks for this section
+
+"Getting the notebooks and Course Materials"
+###########################################
+Use the blue resource link that pops up to go to github repo:
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
+
+"Git and GitHub Overview"
+#########################
+Useful link for learning git
+https://try.github.io/
+https://guides.github.com/activities/hello-world/
+http://gitimmersion.com/
+
+All major companies ar using git and github
+
+
+
+
+
+
