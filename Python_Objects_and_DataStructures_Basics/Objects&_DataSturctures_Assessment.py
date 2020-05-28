@@ -17,7 +17,8 @@ myDict = {'taste': "sweet ",
           'numbers': 4,
           'decimal': 4.2
           , 'taste': "sour"}
-# if there are duplicate members in a dictionary, python will only recognize the value of the second repeated diction
+# if there are duplicate members in a dictionary, python will only recognize
+#the value of the second repeated diction
 # ary object
 # of the second
 # How to print objects in a dictionary in python:
@@ -95,11 +96,11 @@ print(type(list4))
 
 # Examples of lists, tuples, sets, dictionaries.
 # This is a list
-first_ex = [2,4,6,8]
+first_ex = [2, 4, 6, 8]
 # This is a tuple
-sec_ex = (1,3,5,7)
+sec_ex = (1, 3, 5, 7)
 # This is a set
-third_ex = {20,18,16,14}
+third_ex = {20, 18, 16, 14}
 # This is a dictionary
 fourth_ex = {'key1': "first element "}
 print("The third example is a: ", type(third_ex))
@@ -117,11 +118,11 @@ print(d['k1'])
 
 # This will be hard and annoying!
 d = {'k1':
-         [1,2,
+         [1, 2,
           {'k2':
                ['this is tricky',
                 {'tough':
-                     [1,2,
+                     [1, 2,
                       ['hello']
                       ]}]}]}
-print(d['k1'][0]['k2']['tough']) 
+print(d['k1'][2]['k2'][1]['tough'][2])
