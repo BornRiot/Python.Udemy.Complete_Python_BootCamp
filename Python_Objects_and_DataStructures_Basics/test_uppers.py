@@ -16,5 +16,3 @@ print("This is just another line of code ")
 print('Python  %s' % 'rules')
 
 print()
-print("This is one of my old line of comment just to do a comment")
-
