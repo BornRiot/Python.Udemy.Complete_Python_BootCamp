@@ -7,3 +7,4 @@ for x in my_list:
         my_list = my_list.pop(x.index(" "))
 print(my_list)
 print("This is an update to test Sublime Merge Pull Request")
+print("Register new branch")
