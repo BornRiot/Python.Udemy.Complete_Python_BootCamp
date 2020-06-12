@@ -3,6 +3,18 @@
 """My module docstring """
 
 
+def myfunc2(some_str):
+    """This is my module docstring"""
+    new_string = str(some_str).lower()
+    next_string = ""
+    for i, v in enumerate(new_string):
+        if i % 2 == 0:
+            next_string += v.upper()
+        else:
+            next_string += v.lower()
+    return next_string
+
+
 def myfunc(*args):
     mynewstring = ''
 
