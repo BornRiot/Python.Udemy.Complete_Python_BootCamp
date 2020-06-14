@@ -2,6 +2,7 @@
 This is my module docstring
 """
 
+
 def reversed_sen_is(sentence):
     """This is my function docstring"""
     my_sen_list = [x for x in sentence.split(" ")]
@@ -10,6 +11,4 @@ def reversed_sen_is(sentence):
     return get_stuff2
 
 
-
-
-print(reversed_sen_is('We are ready'))
+print(reversed_sen_is('we are ready'))
