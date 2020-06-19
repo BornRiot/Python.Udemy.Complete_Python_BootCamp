@@ -1,16 +1,10 @@
-/.idea/modules.xml
-/.idea/Python.Udemy.Complete_Python_BootCamp.iml
-/.idea/vcs.xml
-/.idea/workspace.xml
-/Installing_Python(Step_byStep).txt
-/Python_BootCamp_Short_Notes.txt
-/Sublime_Scripts/.ipynb_checkpoints/
-#ignore all .iml
+*.idea
 *.iml
+*.ipynb_checkpoints
+
+/Python_BootCamp_Short_Notes.txt
+#ignore all .iml
 /Course_Overview/Curriculum_Overview.txt
 /Course_Overview/Course_Overview_ShortNotes.txt
-/Python_SetUp/.ipynb_checkpoints/my_first_notebook-checkpoint.ipynb
-/Python_Objects_and_DataStructures_Basics/.ipynb_checkpoints/
-/.idea/dictionaries
-/.idea/misc.xml
-/Python_SetUp/Python_SetUp.iml
+/Complete-Python-3-Bootcamp-master/
+/Notes/
