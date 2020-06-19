@@ -1,5 +1,5 @@
 """
-T his is my module docstring
+This is my module docstring
 """
 
 

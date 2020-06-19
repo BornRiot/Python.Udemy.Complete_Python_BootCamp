@@ -1,6 +1,5 @@
 """My module docstring """
 
-"""My module docstring """
 
 
 def myfunc2(some_str):
@@ -16,6 +15,7 @@ def myfunc2(some_str):
 
 
 def myfunc(*args):
+    """My function docstring"""
     mynewstring = ''
 
     mystring = str(args[0])
