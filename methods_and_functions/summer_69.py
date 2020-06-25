@@ -1,12 +1,10 @@
 """
-This ,odule is used to solve the Summer of 69 coding challenge
+Used answer specified in course materials
 """
-
-def summer_69(*args):
-    """This is my function docstring for this program"""
+def summer_69_c(arr):
     total = 0
     add = True
-    for num in args:
+    for num in arr:
         while add:
             if num != 6:
                 total += num
@@ -20,4 +18,7 @@ def summer_69(*args):
                 add = True
                 break
     return total
-print(summer_69(2, 1, 6, 9, 11))
+
+
+
+print(summer_69_c([2, 1, 6, 9, 11]))

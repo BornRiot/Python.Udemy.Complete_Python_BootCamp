@@ -12,5 +12,11 @@ def animal_crackers(text):
     else:
         return False
 
+def animal_crackers_c(text):
+    wordlist = text.split()
+    return wordlist[0][0] == wordlist[1][0]
+
 
 print(animal_crackers("Levelheaded Llama"))
+print("this is the correct answer:")
+print(animal_crackers_c("Levelheaded Llama"))

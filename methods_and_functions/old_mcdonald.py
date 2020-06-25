@@ -9,19 +9,13 @@ def old_macdonald1(word):
     return new_word
 
 
-def old_mcdonald(word):
-    """This is my docstring """
-    new_string = ""
-    for i in enumerate(word):
-        if i == 0:
-            first_letter = word[i].capitalize()
-            new_string = new_string + first_letter + word[1:4]
-        elif i == 4:
-            fourth_letter = word[i].capitalize()
-            new_string = new_string + fourth_letter
-
-    return new_string
+def old_macdonald_c(name):
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return 'Name is too short!'
 
 
-print(old_mcdonald("macdonald"))
 print(old_macdonald1('macdonald'))
+print("This is the correct answer:")
+print(old_macdonald_c('macdonald'))

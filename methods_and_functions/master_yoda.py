@@ -2,6 +2,8 @@
 This is my module docstring
 """
 
+def master_yoda_c(text):
+    return ' '.join(text.split()[::-1])
 
 def reversed_sen_is(sentence):
     """This is my function docstring"""
@@ -12,3 +14,5 @@ def reversed_sen_is(sentence):
 
 
 print(reversed_sen_is('we are ready'))
+print("This is the correct answer")
+print(master_yoda_c("we are ready"))

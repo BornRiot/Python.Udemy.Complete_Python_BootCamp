@@ -2,6 +2,15 @@
 This module is used to solve the black jack problem in the methods section
 through simulating  the playing of Black Jack
 """
+def blackjack_c(a,b,c):
+
+    if sum((a,b,c)) <= 21:
+        return sum((a,b,c))
+    elif sum((a,b,c)) <=31 and 11 in (a,b,c):
+        return sum((a,b,c)) - 10
+    else:
+        return 'BUST'
+
 def black_jack(*args):
     """
     This function is used to create the necessary elements to
@@ -21,4 +30,6 @@ def black_jack(*args):
         results = 'BUST'
     return results
 
-print(black_jack(5, 6, 7))
+print(black_jack(7, 6, 11))
+print("this is the correct answer:")
+print(blackjack_c(7, 6, 11))
