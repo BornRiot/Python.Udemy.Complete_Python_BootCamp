@@ -1,0 +1,53 @@
+Notes Taken 08/04/19
+"Installing Python" Video Notes
+--------------------------------
+Developed in 1991 by Vido Gran Rossum
+Make use of white spaces; easier to learn
+
+"Running Python Code" Video Notes
+----------------------------------
+Jupyter and possibly other notebooks suppurt:
+in-line mark down notes, visualizations, vidoes, and more 
+
+Getting the notebooks and course material
+------------------------------------------
+repository for Jupyter Notebooks:
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
+
+
+Git and GitHub Video Notes
+------------------------------------------
+git-scm.com for git learning.
+Try git link to practice git
+commits are snapshots of your codes
+to learn more about github go to:
+guides.github.com/activities/hello-world
+gtiiimersion.com to learn more about code.
+
+Intriduction to Python Data Types
+------------------------------------------
+Notes taken in Jupyter notebook
+
+
+Python Numbers
+----------------
+Notes taken in Jupyter notebook
+
+Variable Assignments
+---------------------
+Notes taken in Jupyter notebook
+
+
+Intro to Strings
+---------------------
+Notes taken in Jupyter notebook
+
+
+
+
+
+
+
+
+
+ 
