@@ -1,9 +1,11 @@
-from collections import defaultdict
-
 """
 This module is used to solve the count_case problem in a string from the
-functions and methods homework.
+functions and methods homework. This solution uses a for loop and islower
+function to count the case of the letters in the sentence
 """
+
+# Author: Marvin DaCosta, Created June 27, 2020, Last Modified: June 28, 2020
+
 # YouTube video on how to use collections in python:
 # https://bit.ly/2NBaCV6
 
@@ -12,20 +14,6 @@ SAMPLE_STRING = 'Hello Mr. Rogers, how are you this fine Tuesday?'
 
 
 # Create a function to loop through each character in the string
-
-def count_collection(some_string):
-    global upper_d, lower_d
-    the_dict = defaultdict(int)
-    the_dict_U = defaultdict(int)
-
-    for characters in SAMPLE_STRING:
-        the_dict[characters.islower()] += 1
-        the_dict_U[characters.isupper()] += 1
-        upper_d = the_dict_U.values()
-        lower_d = the_dict.values()
-    return upper_d, lower_d
-
-
 def count_loop(the_string):
     """
     This function is used to loop through each charcter in the string and
@@ -44,7 +32,3 @@ def count_loop(the_string):
 lower, upper = count_loop(SAMPLE_STRING)
 print("There are", upper, "upper case  and ", lower, \
       "lower case characters in the string")
-
-the_item = count_collection(SAMPLE_STRING)
-for z, y in the_item:
-    print(z, y)
