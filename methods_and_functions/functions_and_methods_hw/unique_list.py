@@ -3,14 +3,13 @@ This module houses code to return the unique elements in a list
 from the orginal list.
 """
 
+
 def unique_list(the_list):
-    """Docstring"""
-    the_set = set(the_list)
+    """This is my function docstring"""
+    def to_new_set():
+        return list(set(the_list))
+    return to_new_set
 
-    def new_list(the_set):
-        the_final_list = list(the_set)
-        print(the_final_list)
 
-        return new_list
-
-print(unique_list([1,1,1,1,2,2,3,3,3,3,4,5]))
+vals = unique_list([11, 11, 25, 25, 36, 98, 8, 8, 47])
+print(vals())
