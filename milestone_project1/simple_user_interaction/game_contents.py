@@ -24,6 +24,8 @@ def position_choice():
             print("Sorry, invalid choice")
     return int(choice)
 
+tim_number = "941-840-8211"
+
 
 def replacement_choice(game_list, position):
     """Func string"""
