@@ -5,14 +5,18 @@ Module docstring
 the_board = list()
 
 
+def append_board_item(game_board, item):
+    if len(game_board) < 9:
+        game_board.append(item)
+    else:
+        print("Cannot append item. Limit reached ")
+
+
 # Define how the board will be displayed
 def print_the_board(get_board):
     print(get_board[0:3])
     print(get_board[3:6])
     print(get_board[6:9])
-
-
-print_the_board(the_board)
 
 
 def the_user_choice():
@@ -48,5 +52,16 @@ def the_user_choice():
     return int(choice)
 
 
-get_choice = the_user_choice()
-print("This is the choice", get_choice)
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+append_board_item(the_board, 's')
+# append_board_item(the_board, 's')
+
+print_the_board(the_board)

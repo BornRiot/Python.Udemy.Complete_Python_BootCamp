@@ -24,7 +24,6 @@ def position_choice():
             print("Sorry, invalid choice")
     return int(choice)
 
-tim_number = "941-840-8211"
 
 
 def replacement_choice(game_list, position):
@@ -32,7 +31,6 @@ def replacement_choice(game_list, position):
     user_placement = input("Type a string to place at position:")
     game_list[position] = user_placement
     return game_list
-
 
 def game_on_choice():
     """Function docstring"""
