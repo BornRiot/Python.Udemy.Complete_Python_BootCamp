@@ -32,6 +32,7 @@ def replacement_choice(game_list, position):
     game_list[position] = user_placement
     return game_list
 
+
 def game_on_choice():
     """Function docstring"""
     choice = "Wrong"
