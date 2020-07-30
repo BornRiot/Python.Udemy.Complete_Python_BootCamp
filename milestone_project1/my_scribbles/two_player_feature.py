@@ -1,10 +1,4 @@
-"""
-This module is used to create my first project in the course.
-The projects calls for creating a tic-tac-toe game using python
-"""
-# define place elements in the  board. Visual list star at 1 not 0
 the_table = [None, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
 
 def print_game_table(game_table):
     print(game_table[1] + "|" + game_table[2] + '|' + game_table[3])
@@ -20,7 +14,6 @@ def replacement_choice(game_table, position, piece):
     game_table[position] = piece
     return game_table
 
-
 def game_on_choice():
     """Function docstring"""
     choice = "Wrong"
@@ -35,22 +28,19 @@ def game_on_choice():
         print("Game Over")
         return False
 
-
 player_one_piece = input("Player 1, please select X or O to play with: ")
-
-
 def player_one():
+
     take_position = int(input("Please enter a position to be replaced(1-9): "))
 
     replacement_choice(the_table, take_position, player_one_piece)
 
     print_game_table(the_table)
 
-
 def player_two():
     player_two_piece = ""
     if player_one_piece == 'X':
-        player_two_piece = 'O'
+        player_two_piece='O'
     elif player_one_piece == 'O':
         player_two_piece = 'X'
 
@@ -67,3 +57,4 @@ while game_on:
     player_two()
 
     game_on = game_on_choice()
+
