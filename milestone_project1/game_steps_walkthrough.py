@@ -5,7 +5,7 @@ the tic-tac-toe game.
 from random import randint  # import used in the choose_first function
 
 # List used as a representation of the game board
-test_board = [None, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+test_board = [None, "1", "X", "3", "X", "5", "6", "7", "8", "9"]
 
 
 def display_board(game_table):
@@ -61,7 +61,7 @@ def win_check(board, mark):
     then checks to see if that mark has won.
     """
 
-    # This is the course solution code. Not mine
+    # This is the instructor's solution code for the win_check function.
     return ((board[7] == mark and board[8] == mark and board[9] == mark) or  # across the top
             (board[4] == mark and board[5] == mark and board[6] == mark) or  # across the middle
             (board[1] == mark and board[2] == mark and board[3] == mark) or  # across the bottom
@@ -106,4 +106,33 @@ def full_board_check(board):
     return all(new_list)
 
 
-print('\n' * 5)
+def player_choice(board):
+    """
+    Function that asks for a player's
+    next position (as a number 1-9) and then uses the function space_check
+    to check if it's a free position.
+    """
+    next_position = int(input("Please enter your next position(1-9): "))
+    is_free = space_check(board, next_position)
+    if not is_free:
+        return "Tha position on the game board is not free"
+    else:
+        return next_position
+
+
+def replay():
+    """Function docstring"""
+    choice = "Wrong"
+
+    while choice not in ['Y', 'N']:
+        choice = input("Do you want to replay the game: (Y or N) ")
+        if choice not in ['Y', 'N']:
+            print("Sorry, I don't understand. Please choose Y or N")
+    if choice == 'Y':
+        return True
+    else:
+        print("Good Bye")
+        return False
+
+
+replay()
