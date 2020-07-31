@@ -25,7 +25,6 @@ def position_choice():
     return int(choice)
 
 
-
 def replacement_choice(game_list, position):
     """Func string"""
     user_placement = input("Type a string to place at position:")
