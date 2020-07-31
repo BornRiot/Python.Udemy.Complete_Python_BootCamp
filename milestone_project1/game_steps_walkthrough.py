@@ -5,7 +5,7 @@ the tic-tac-toe game.
 from random import randint  # import used in the choose_first function
 
 # List used as a representation of the game board
-test_board = [None, "1", "X", "3", "X", "5", "6", "7", "8", "9"]
+test_board = [None, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
 def display_board(game_table):
@@ -79,9 +79,9 @@ def choose_first(ply1, ply2):
     """
     get_first = randint(1, 2)
     if get_first == 1:
-        print(ply1 + " will be going first")
+        return ply1 + " will be going first"
     elif get_first == 2:
-        print(ply2 + " will be going first")
+        return ply2 + " will be going first"
 
 
 def space_check(board, position):
@@ -112,7 +112,7 @@ def player_choice(board):
     next position (as a number 1-9) and then uses the function space_check
     to check if it's a free position.
     """
-    next_position = int(input("Please enter your next position(1-9): "))
+    next_position = int(input("Enter a position(1-9): "))
     is_free = space_check(board, next_position)
     if not is_free:
         return "Tha position on the game board is not free"
@@ -135,4 +135,28 @@ def replay():
         return False
 
 
-replay()
+# Implementation of the game
+print('Welcome to Tic Tac Toe')
+game_setup = False
+while not game_setup:
+    player1, player2 = player_input()
+    display_marker_choice(player1, player2)
+    who_first = choose_first(player1, player2)
+    print(who_first)
+    print("Please select a position on the board to place your piece")
+    display_board(test_board)
+    if 'X' in who_first:
+        the_choice = player_choice(test_board)
+        place_marker(test_board, 'X', the_choice)
+        display_board(test_board)
+    elif 'O' in who_first:
+        the_choice = player_choice(test_board)
+        place_marker(test_board, 'O', the_choice)
+        display_board(test_board)
+    game_setup = True
+    print("Your piece has been placed on the board. Next player's move ")
+
+    game_on = True
+    while game_on:
+        player_choice()
+
