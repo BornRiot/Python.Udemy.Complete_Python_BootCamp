@@ -135,6 +135,8 @@ def replay():
         return False
 
 
+full_board = full_board_check(test_board)
+
 # Implementation of the game
 print('Welcome to Tic Tac Toe')
 game_setup = False
@@ -158,5 +160,19 @@ while not game_setup:
 
     game_on = True
     while game_on:
-        player_choice()
+        if 'X' in who_first:
+            play_choice = player_choice(test_board)
+            place_marker(test_board, 'O', play_choice)
+            display_board(test_board)
+            next_choice = player_choice(test_board)
+            place_marker(test_board, 'X', next_choice)
+            display_board(test_board)
 
+        elif 'O' in who_first:
+            play_choice = player_choice(test_board)
+            place_marker(test_board, 'X', play_choice)
+            display_board(test_board)
+            next_choice = player_choice(test_board)
+            place_marker(test_board, 'O', next_choice)
+            display_board(test_board)
+        
