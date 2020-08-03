@@ -2,7 +2,6 @@
 *.iml
 *.ipynb_checkpoints
 
-/Python_BootCamp_Short_Notes.txt
 #ignore all .iml
 /Course_Overview/Curriculum_Overview.txt
 /Course_Overview/Course_Overview_ShortNotes.txt
