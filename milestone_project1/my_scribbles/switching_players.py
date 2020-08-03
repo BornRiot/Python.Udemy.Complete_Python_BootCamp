@@ -157,6 +157,8 @@ while not game_setup:
     print("Your piece has been placed on the board. Next player's move ")
 
     game_on = True
+    board_full = full_board_check(test_board)
+    print(board_full)
     while game_on:
         if 'X' in who_first:
             play_choice = player_choice(test_board)
@@ -165,6 +167,8 @@ while not game_setup:
             next_choice = player_choice(test_board)
             place_marker(test_board, 'X', next_choice)
             display_board(test_board)
+            if not board_full:
+                game_on = replay()
 
         elif 'O' in who_first:
             play_choice = player_choice(test_board)
@@ -173,5 +177,5 @@ while not game_setup:
             next_choice = player_choice(test_board)
             place_marker(test_board, 'O', next_choice)
             display_board(test_board)
-        print(win_check(test_board, 'O'))
-        print(full_board_check(test_board))
+            if not board_full:
+                game_on = replay()
