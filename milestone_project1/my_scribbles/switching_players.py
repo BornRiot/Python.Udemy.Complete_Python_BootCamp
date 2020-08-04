@@ -167,8 +167,6 @@ while not game_setup:
             next_choice = player_choice(test_board)
             place_marker(test_board, 'X', next_choice)
             display_board(test_board)
-            if not board_full:
-                game_on = replay()
 
         elif 'O' in who_first:
             play_choice = player_choice(test_board)
@@ -177,5 +175,4 @@ while not game_setup:
             next_choice = player_choice(test_board)
             place_marker(test_board, 'O', next_choice)
             display_board(test_board)
-            if not board_full:
-                game_on = replay()
+            game_on = replay()
