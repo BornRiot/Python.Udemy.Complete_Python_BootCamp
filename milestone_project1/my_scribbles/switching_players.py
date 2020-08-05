@@ -1,5 +1,5 @@
 """
-This module is used to follow the steps of the lesson walkthrough to create
+This module is used to follow the steps of the lesson walk through to create
 the tic-tac-toe game.
 """
 from random import randint  # import used in the choose_first function
@@ -99,7 +99,9 @@ def full_board_check(board):
     """
     new_list = list()
     for index, letter in enumerate(board[1:10]):
-        if letter == 'X' or letter == 'O':
+        if letter == 'X':
+            new_list.append(1)
+        elif letter == 'O':
             new_list.append(1)
         else:
             new_list.append(0)
@@ -156,23 +158,29 @@ while not game_setup:
     game_setup = True
     print("Your piece has been placed on the board. Next player's move ")
 
-    game_on = True
-    board_full = full_board_check(test_board)
-    print(board_full)
-    while game_on:
-        if 'X' in who_first:
-            play_choice = player_choice(test_board)
-            place_marker(test_board, 'O', play_choice)
-            display_board(test_board)
-            next_choice = player_choice(test_board)
-            place_marker(test_board, 'X', next_choice)
-            display_board(test_board)
+game_on = True
+board_full = full_board_check(test_board)
 
-        elif 'O' in who_first:
-            play_choice = player_choice(test_board)
-            place_marker(test_board, 'X', play_choice)
-            display_board(test_board)
-            next_choice = player_choice(test_board)
-            place_marker(test_board, 'O', next_choice)
-            display_board(test_board)
-            game_on = replay()
+while not game_on:
+    game_on = replay()
+while game_on and not full_board_check(test_board):
+    if 'X' in who_first:
+        play_choice = player_choice(test_board)
+        place_marker(test_board, 'O', play_choice)
+        display_board(test_board)
+        next_choice = player_choice(test_board)
+        place_marker(test_board, 'X', next_choice)
+        display_board(test_board)
+        if win_check(test_board, "X") or win_check(test_board, 'O'):
+            game_on = False
+    elif 'O' in who_first:
+        play_choice = player_choice(test_board)
+        place_marker(test_board, 'X', play_choice)
+        display_board(test_board)
+        next_choice = player_choice(test_board)
+        place_marker(test_board, 'O', next_choice)
+        display_board(test_board)
+        if win_check(test_board, "X") or win_check(test_board, 'O'):
+            game_on = False
+while full_board_check(test_board):
+    print("I")
