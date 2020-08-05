@@ -187,3 +187,4 @@ while game_on and not full_board_check(test_board):
 while full_board_check(test_board):
     print("I")
 
+    print("D")
