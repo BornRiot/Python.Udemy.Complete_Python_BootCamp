@@ -137,6 +137,8 @@ def replay():
         return False
 
 
+full_board = full_board_check(test_board)
+
 # Implementation of the game
 print('Welcome to Tic Tac Toe')
 game_setup = False
