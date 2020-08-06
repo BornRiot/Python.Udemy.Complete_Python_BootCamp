@@ -142,10 +142,10 @@ full_board = full_board_check(test_board)
 # Implementation of the game
 print('Welcome to Tic Tac Toe')
 game_setup = False
+player1, player2 = player_input()
+who_first = choose_first(player1, player2)
 while not game_setup:
-    player1, player2 = player_input()
     display_marker_choice(player1, player2)
-    who_first = choose_first(player1, player2)
     print(who_first)
     print("Please select a position on the board to place your piece")
     display_board(test_board)
@@ -174,7 +174,7 @@ while game_on and not full_board_check(test_board):
         place_marker(test_board, 'X', next_choice)
         display_board(test_board)
         if win_check(test_board, "X") or win_check(test_board, 'O'):
-            game_on = False
+            game_on = replay()
     elif 'O' in who_first:
         play_choice = player_choice(test_board)
         place_marker(test_board, 'X', play_choice)
@@ -183,8 +183,6 @@ while game_on and not full_board_check(test_board):
         place_marker(test_board, 'O', next_choice)
         display_board(test_board)
         if win_check(test_board, "X") or win_check(test_board, 'O'):
-            game_on = False
+            game_on = replay()
 while full_board_check(test_board):
-    print("I")
-
-    print("D")
+    game_on = replay()
