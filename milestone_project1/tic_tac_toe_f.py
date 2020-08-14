@@ -1,35 +1,34 @@
 """
 This module is used to follow the steps of the lesson walk through to create
-the tic-tac-toe game.
+the tic-tac-toe game. This is the final module for the course challenge
 """
 from random import randint  # import used in the choose_first function
 
 # List used as a representation of the game board
-test_board = [None, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+legacy_board = ['#', '7', '8', '9', '4', '5', '6', '1', '2', '3']
+game_board = ['#', '7', '8', '9', '4', '5', '6', '1', '2', '3']
 
 
 class Player:
-    def __init__(self, player_id, name, marker ):
+    def __init__(self, player_id, name, marker):
         self.player_id = player_id
         self.name = name
         self.marker = marker
-
-
-
 
     def display_marker_choice(self):
         """
         Function that displays the marker choice of each player
         """
-        print(self.player_id+" will be playing as "+ self.marker)
+        print(self.player_id + " will be playing as " + self.marker)
 
-
-    def place_marker(self, board, marker, position):
+    def place_marker(self, board, marker, value):
         """
         Function that takes in the board list object, a marker ('X' or 'O'),
         and a desired position (number 1-9) and assigns it to the board.
         """
-        board[position] = marker
+        for index, item in enumerate(board):
+            if item == str(value):
+                board[index] = marker
 
     def win_check(self, board, mark):
         """
@@ -47,16 +46,12 @@ class Player:
                 (board[7] == mark and board[5] == mark and board[3] == mark) or  # diagonal
                 (board[9] == mark and board[5] == mark and board[1] == mark))  # diagonal
 
-
-
     def space_check(self, board, position):
         """
         function that returns a boolean indicating
         whether a space on the board is freely available.
         """
         return board[position] != 'X' and board[position] != 'O'
-
-
 
     def player_choice(self, board):
         """
@@ -72,12 +67,12 @@ class Player:
             return next_position
 
 
-
 # Implementation of the game
 print('Welcome to Tic Tac Toe')
 game_setup = False
 player_one = Player("Player 1", 'Mike', '')
-player_two = Player("Player 2", 'Mike','')
+player_two = Player("Player 2", 'Mike', '')
+
 
 def choose_first(ply1, ply2):
     """
@@ -92,6 +87,7 @@ def choose_first(ply1, ply2):
         print("Player 2 will be going first: ")
         return ply2
 
+
 def player_input():
     """
      Function that takes in a player input and assign their marker as 'X' or 'O'
@@ -104,9 +100,10 @@ def player_input():
         player_1 = input("Player 1 first: ")
     print("Player 1 has chosen " + player_1)
     while player_2 not in accepted:
-        player_2 =input("Player 2, please choose the opposite of player 1: ")
-    print("Player 2 has chosen "+ player_2)
+        player_2 = input("Player 2, please choose the opposite of player 1: ")
+    print("Player 2 has chosen " + player_2)
     return player_1, player_2
+
 
 def full_board_check(board):
     """
@@ -122,6 +119,7 @@ def full_board_check(board):
         else:
             new_list.append(0)
     return all(new_list)
+
 
 def full_board_check_2(board):
     check_val = []
@@ -145,12 +143,13 @@ def display_board(game_table):
     print("-|-|-")
     print(game_table[7] + "|" + game_table[8] + '|' + game_table[9])
 
+
 def replay():
     """Function docstring"""
     choice = "Wrong"
 
     while choice not in ['Y', 'N']:
-        choice = input("Keep playing: (Y or N) ")
+        choice = input("Do you want to replay: (Y or N) ")
         if choice not in ['Y', 'N']:
             print("Sorry, I don't understand. Please choose Y or N")
     if choice == 'Y':
@@ -160,52 +159,66 @@ def replay():
         return False
 
 
-
 # Game set-up
 while not game_setup:
-    player_one.marker,player_two.marker = player_input()
+    player_one.marker, player_two.marker = player_input()
     player_one.display_marker_choice()
     player_two.display_marker_choice()
     game_setup = True
 turn = choose_first(player_one, player_two)
-display_board(test_board)
+display_board(game_board)
 
-#Implementation
+# Implementation
 game_on = True
-board_full = full_board_check_2(test_board)
+board_full = full_board_check_2(game_board)
 while not game_on:
     game_on = replay()
 while game_on:
     if turn == player_one:
-        if full_board_check_2(test_board):
-            test_board.clear()
-            test_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
+            print(player_two.player_id + " has won the game")
+            game_board.clear()
+            game_board = legacy_board.copy()
             game_on = replay()
-            player_one.marker,player_two.marker = player_input()
+            player_one.marker, player_two.marker = player_input()
+            player_one.display_marker_choice()
+            player_two.display_marker_choice()
+            display_board(game_board)
+            turn = choose_first(player_one, player_two)
+        elif full_board_check_2(game_board):
+            game_board.clear()
+            game_board = legacy_board.copy()
+            game_on = replay()
+            player_one.marker, player_two.marker = player_input()
             player_one.display_marker_choice()
             player_two.display_marker_choice()
             turn = choose_first(player_one, player_two)
         else:
-            get_pos= int(input(player_one.player_id+ " enter position: "))
-            player_one.place_marker(test_board,player_one.marker,get_pos)
-            display_board(test_board)
+            get_pos = int(input(player_one.player_id + " enter position: "))
+            player_one.place_marker(game_board, player_one.marker, get_pos)
+            display_board(game_board)
             turn = player_two
     elif turn == player_two:
-        if full_board_check_2(test_board):
-            test_board.clear()
-            test_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
+            print(player_one.player_id + " has won the game.")
+            game_board.clear()
+            game_board = legacy_board.copy()
             game_on = replay()
-            player_one.marker,player_two.marker = player_input()
+            player_one.marker, player_two.marker = player_input()
+            player_one.display_marker_choice()
+            player_two.display_marker_choice()
+            display_board(game_board)
+            turn = choose_first(player_one, player_two)
+        elif full_board_check_2(game_board):
+            game_board.clear()
+            game_board = legacy_board.copy()
+            game_on = replay()
+            player_one.marker, player_two.marker = player_input()
             player_one.display_marker_choice()
             player_two.display_marker_choice()
             turn = choose_first(player_one, player_two)
         else:
-            get_pos= int(input(player_two.player_id +" enter position: "))
-            player_two.place_marker(test_board,player_two.marker,get_pos)
-            display_board(test_board)
+            get_pos = int(input(player_two.player_id + " enter position: "))
+            player_two.place_marker(game_board, player_two.marker, get_pos)
+            display_board(game_board)
             turn = player_one
-
-# while board_full:
-#     print(player_two.win_check(test_board, player_two.marker))
-#     print(player_two.win_check(test_board, player_two.marker))
-#     game_on = replay()
