@@ -21,12 +21,14 @@ class Player:
         """
         print(self.player_id + " will be playing as " + self.marker)
 
-    def place_marker(self, board, marker, position):
+    def place_marker(self, board, marker, value):
         """
         Function that takes in the board list object, a marker ('X' or 'O'),
         and a desired position (number 1-9) and assigns it to the board.
         """
-        board[position] = marker
+        for index, item in enumerate(board):
+            if item == str(value):
+                board[index] = marker
 
     def win_check(self, board, mark):
         """
