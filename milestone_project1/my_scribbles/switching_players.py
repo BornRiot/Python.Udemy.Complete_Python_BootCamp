@@ -8,69 +8,76 @@ from random import randint  # import used in the choose_first function
 test_board = [None, "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
-def display_board(game_table):
-    """
-    function that can print out a board. Sets up the board as a list,
-    where each index 1-9 corresponds with a number on
-    a number pad, so there is  a 3 by 3 board representation.
-    """
-    print(game_table[1] + "|" + game_table[2] + '|' + game_table[3])
-    print("-|-|-")
-    print(game_table[4] + "|" + game_table[5] + '|' + game_table[6])
-    print("-|-|-")
-    print(game_table[7] + "|" + game_table[8] + '|' + game_table[9])
+class Player:
+    def __init__(self, player_id, name, marker ):
+        self.player_id = player_id
+        self.name = name
+        self.marker = marker
 
 
-def player_input():
-    """
-    Function that takes in a player input and assign their marker as 'X' or 'O'
-    """
-    player2_choice = ""
-    """Register the players choice of playing as  X or O """
-    player1_choice = input("Player 1, please enter a marker X or O: ")
-    player1_choice = player1_choice.upper()
-    while player1_choice != 'X' and player1_choice != 'O':
-        player1_choice = input("Sorry, wrong input. Please enter a marker X or O: ")
-        player1_choice = player1_choice.upper()
-    if player1_choice == 'X':
-        player2_choice = 'O'
-    elif player1_choice == 'O':
-        player2_choice = 'X'
-    return player1_choice, player2_choice
 
 
-def display_marker_choice(p1_choice, p2_choice):
-    """
-    Function that displays the marker choice of each player
-    """
-    print("Player 1 will be playing as: " + p1_choice)
-    print("Player 2 will be playing as: " + p2_choice)
+    def display_marker_choice(self):
+        """
+        Function that displays the marker choice of each player
+        """
+        print(self.player_id+" will be playing as "+ self.marker)
 
 
-def place_marker(board, marker, position):
-    """
-    Function that takes in the board list object, a marker ('X' or 'O'),
-    and a desired position (number 1-9) and assigns it to the board.
-    """
-    board[position] = marker
+    def place_marker(self, board, marker, position):
+        """
+        Function that takes in the board list object, a marker ('X' or 'O'),
+        and a desired position (number 1-9) and assigns it to the board.
+        """
+        board[position] = marker
+
+    def win_check(self, board, mark):
+        """
+        function that takes in a board and a mark (X or O) and
+        then checks to see if that mark has won.
+        """
+
+        # This is the instructor's solution code for the win_check function.
+        return ((board[7] == mark and board[8] == mark and board[9] == mark) or  # across the top
+                (board[4] == mark and board[5] == mark and board[6] == mark) or  # across the middle
+                (board[1] == mark and board[2] == mark and board[3] == mark) or  # across the bottom
+                (board[7] == mark and board[4] == mark and board[1] == mark) or  # down the middle
+                (board[8] == mark and board[5] == mark and board[2] == mark) or  # down the middle
+                (board[9] == mark and board[6] == mark and board[3] == mark) or  # down the right side
+                (board[7] == mark and board[5] == mark and board[3] == mark) or  # diagonal
+                (board[9] == mark and board[5] == mark and board[1] == mark))  # diagonal
 
 
-def win_check(board, mark):
-    """
-    function that takes in a board and a mark (X or O) and
-    then checks to see if that mark has won.
-    """
 
-    # This is the instructor's solution code for the win_check function.
-    return ((board[7] == mark and board[8] == mark and board[9] == mark) or  # across the top
-            (board[4] == mark and board[5] == mark and board[6] == mark) or  # across the middle
-            (board[1] == mark and board[2] == mark and board[3] == mark) or  # across the bottom
-            (board[7] == mark and board[4] == mark and board[1] == mark) or  # down the middle
-            (board[8] == mark and board[5] == mark and board[2] == mark) or  # down the middle
-            (board[9] == mark and board[6] == mark and board[3] == mark) or  # down the right side
-            (board[7] == mark and board[5] == mark and board[3] == mark) or  # diagonal
-            (board[9] == mark and board[5] == mark and board[1] == mark))  # diagonal
+    def space_check(self, board, position):
+        """
+        function that returns a boolean indicating
+        whether a space on the board is freely available.
+        """
+        return board[position] != 'X' and board[position] != 'O'
 
+
+
+    def player_choice(self, board):
+        """
+        Function that asks for a player's
+        next position (as a number 1-9) and then uses the function space_check
+        to check if it's a free position.
+        """
+        next_position = int(input("Enter a position(1-9): "))
+        is_free = self.space_check(board, next_position)
+        if not is_free:
+            return "Tha position on the game board is not free"
+        else:
+            return next_position
+
+
+
+# Implementation of the game
+print('Welcome to Tic Tac Toe')
+game_setup = False
+player_one = Player("Player 1", 'Mike', '')
+player_two = Player("Player 2", 'Mike','')
 
 def choose_first(ply1, ply2):
     """
@@ -79,18 +86,27 @@ def choose_first(ply1, ply2):
     """
     get_first = randint(1, 2)
     if get_first == 1:
-        return ply1 + " will be going first"
+        print("Player 1 will be going first: ")
+        return ply1
     elif get_first == 2:
-        return ply2 + " will be going first"
+        print("Player 2 will be going first: ")
+        return ply2
 
-
-def space_check(board, position):
+def player_input():
     """
-    function that returns a boolean indicating
-    whether a space on the board is freely available.
+     Function that takes in a player input and assign their marker as 'X' or 'O'
     """
-    return board[position] != 'X' and board[position] != 'O'
-
+    player_1 = None
+    player_2 = None
+    accepted = ['X', 'O']
+    print("Players, please choose your markers X or O")
+    while player_1 not in accepted:
+        player_1 = input("Player 1 first: ")
+    print("Player 1 has chosen " + player_1)
+    while player_2 not in accepted:
+        player_2 =input("Player 2, please choose the opposite of player 1: ")
+    print("Player 2 has chosen "+ player_2)
+    return player_1, player_2
 
 def full_board_check(board):
     """
@@ -107,82 +123,89 @@ def full_board_check(board):
             new_list.append(0)
     return all(new_list)
 
+def full_board_check_2(board):
+    check_val = []
+    for letter in board[1:10]:
+        if letter == 'X' or letter == 'O':
+            check_val.append(1)
+        else:
+            check_val.append(0)
+    return all(check_val)
 
-def player_choice(board):
-    """
-    Function that asks for a player's
-    next position (as a number 1-9) and then uses the function space_check
-    to check if it's a free position.
-    """
-    next_position = int(input("Enter a position(1-9): "))
-    is_free = space_check(board, next_position)
-    if not is_free:
-        return "Tha position on the game board is not free"
-    else:
-        return next_position
 
+def display_board(game_table):
+    """
+    function that can print out a board. Sets up the board as a list,
+    where each index 1-9 corresponds with a number on
+    a number pad, so there is  a 3 by 3 board representation.
+    """
+    print(game_table[1] + "|" + game_table[2] + '|' + game_table[3])
+    print("-|-|-")
+    print(game_table[4] + "|" + game_table[5] + '|' + game_table[6])
+    print("-|-|-")
+    print(game_table[7] + "|" + game_table[8] + '|' + game_table[9])
 
 def replay():
     """Function docstring"""
     choice = "Wrong"
 
     while choice not in ['Y', 'N']:
-        choice = input("Do you want to replay the game: (Y or N) ")
+        choice = input("Keep playing: (Y or N) ")
         if choice not in ['Y', 'N']:
             print("Sorry, I don't understand. Please choose Y or N")
     if choice == 'Y':
         return True
     else:
-        print("Good Bye")
+        print("Game Over")
         return False
 
 
-full_board = full_board_check(test_board)
 
-# Implementation of the game
-print('Welcome to Tic Tac Toe')
-game_setup = False
-player1, player2 = player_input()
-who_first = choose_first(player1, player2)
+# Game set-up
 while not game_setup:
-    display_marker_choice(player1, player2)
-    print(who_first)
-    print("Please select a position on the board to place your piece")
-    display_board(test_board)
-    if 'X' in who_first:
-        the_choice = player_choice(test_board)
-        place_marker(test_board, 'X', the_choice)
-        display_board(test_board)
-    elif 'O' in who_first:
-        the_choice = player_choice(test_board)
-        place_marker(test_board, 'O', the_choice)
-        display_board(test_board)
+    player_one.marker,player_two.marker = player_input()
+    player_one.display_marker_choice()
+    player_two.display_marker_choice()
     game_setup = True
-    print("Your piece has been placed on the board. Next player's move ")
+turn = choose_first(player_one, player_two)
+display_board(test_board)
 
+#Implementation
 game_on = True
-board_full = full_board_check(test_board)
-
+board_full = full_board_check_2(test_board)
 while not game_on:
     game_on = replay()
-while game_on and not full_board_check(test_board):
-    if 'X' in who_first:
-        play_choice = player_choice(test_board)
-        place_marker(test_board, 'O', play_choice)
-        display_board(test_board)
-        next_choice = player_choice(test_board)
-        place_marker(test_board, 'X', next_choice)
-        display_board(test_board)
-        if win_check(test_board, "X") or win_check(test_board, 'O'):
+while game_on:
+    if turn == player_one:
+        if full_board_check_2(test_board):
+            test_board.clear()
+            test_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9']
             game_on = replay()
-    elif 'O' in who_first:
-        play_choice = player_choice(test_board)
-        place_marker(test_board, 'X', play_choice)
-        display_board(test_board)
-        next_choice = player_choice(test_board)
-        place_marker(test_board, 'O', next_choice)
-        display_board(test_board)
-        if win_check(test_board, "X") or win_check(test_board, 'O'):
+            player_one.marker,player_two.marker = player_input()
+            player_one.display_marker_choice()
+            player_two.display_marker_choice()
+            turn = choose_first(player_one, player_two)
+        else:
+            get_pos= int(input(player_one.player_id+ " enter position: "))
+            player_one.place_marker(test_board,player_one.marker,get_pos)
+            display_board(test_board)
+            turn = player_two
+    elif turn == player_two:
+        if full_board_check_2(test_board):
+            test_board.clear()
+            test_board = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9']
             game_on = replay()
-while full_board_check(test_board):
-    game_on = replay()
+            player_one.marker,player_two.marker = player_input()
+            player_one.display_marker_choice()
+            player_two.display_marker_choice()
+            turn = choose_first(player_one, player_two)
+        else:
+            get_pos= int(input(player_two.player_id +" enter position: "))
+            player_two.place_marker(test_board,player_two.marker,get_pos)
+            display_board(test_board)
+            turn = player_one
+
+# while board_full:
+#     print(player_two.win_check(test_board, player_two.marker))
+#     print(player_two.win_check(test_board, player_two.marker))
+#     game_on = replay()
