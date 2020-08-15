@@ -188,13 +188,16 @@ while game_on:
             else:
                 break
         elif full_board_check_2(game_board):
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         else:
             get_pos = int(input(player_one.player_id + " enter position: "))
             player_one.place_marker(game_board, player_one.marker, get_pos)
@@ -214,13 +217,16 @@ while game_on:
             else:
                 break
         elif full_board_check_2(game_board):
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         else:
             get_pos = int(input(player_two.player_id + " enter position: "))
             player_two.place_marker(game_board, player_two.marker, get_pos)
