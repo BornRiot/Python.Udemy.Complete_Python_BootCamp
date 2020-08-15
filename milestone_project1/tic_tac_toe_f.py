@@ -177,14 +177,16 @@ while game_on:
     if turn == player_one:
         if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
             print(player_two.player_id + " has won the game")
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            display_board(game_board)
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         elif full_board_check_2(game_board):
             game_board.clear()
             game_board = legacy_board.copy()
@@ -201,14 +203,16 @@ while game_on:
     elif turn == player_two:
         if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
             print(player_one.player_id + " has won the game.")
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            display_board(game_board)
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         elif full_board_check_2(game_board):
             game_board.clear()
             game_board = legacy_board.copy()
