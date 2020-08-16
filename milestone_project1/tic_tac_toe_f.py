@@ -149,7 +149,7 @@ def replay():
     choice = "Wrong"
 
     while choice not in ['Y', 'N']:
-        choice = input("Do you want to replay: (Y or N) ")
+        choice = input("Do you want to replay [Y or N]: ")
         if choice not in ['Y', 'N']:
             print("Sorry, I don't understand. Please choose Y or N")
     if choice == 'Y':
@@ -177,22 +177,27 @@ while game_on:
     if turn == player_one:
         if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
             print(player_two.player_id + " has won the game")
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            display_board(game_board)
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         elif full_board_check_2(game_board):
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         else:
             get_pos = int(input(player_one.player_id + " enter position: "))
             player_one.place_marker(game_board, player_one.marker, get_pos)
@@ -201,22 +206,27 @@ while game_on:
     elif turn == player_two:
         if player_two.win_check(game_board, player_two.marker) or player_one.win_check(game_board, player_one.marker):
             print(player_one.player_id + " has won the game.")
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            display_board(game_board)
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         elif full_board_check_2(game_board):
-            game_board.clear()
-            game_board = legacy_board.copy()
-            game_on = replay()
-            player_one.marker, player_two.marker = player_input()
-            player_one.display_marker_choice()
-            player_two.display_marker_choice()
-            turn = choose_first(player_one, player_two)
+            if replay():
+                game_board.clear()
+                game_board = legacy_board.copy()
+                player_one.marker, player_two.marker = player_input()
+                player_one.display_marker_choice()
+                player_two.display_marker_choice()
+                display_board(game_board)
+                turn = choose_first(player_one, player_two)
+            else:
+                break
         else:
             get_pos = int(input(player_two.player_id + " enter position: "))
             player_two.place_marker(game_board, player_two.marker, get_pos)
