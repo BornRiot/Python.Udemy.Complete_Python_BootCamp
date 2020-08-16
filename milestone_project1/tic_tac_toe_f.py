@@ -149,7 +149,7 @@ def replay():
     choice = "Wrong"
 
     while choice not in ['Y', 'N']:
-        choice = input("Do you want to replay: (Y or N) ")
+        choice = input("Do you want to replay [Y or N]: ")
         if choice not in ['Y', 'N']:
             print("Sorry, I don't understand. Please choose Y or N")
     if choice == 'Y':
