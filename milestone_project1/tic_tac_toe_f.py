@@ -94,14 +94,16 @@ def player_input():
     """
     player_1 = None
     player_2 = None
+    marker = ''
     accepted = ['X', 'O']
-    print("Players, please choose your markers X or O")
-    while player_1 not in accepted:
-        player_1 = input("Player 1 first: ")
-    print("Player 1 has chosen " + player_1)
-    while player_2 not in accepted:
-        player_2 = input("Player 2, please choose the opposite of player 1: ")
-    print("Player 2 has chosen " + player_2)
+    while marker not in accepted:
+        marker = input("Player 1, choose X or O: ")
+        marker = marker.upper()
+        player_1 = marker
+        if player_1 == 'X':
+            player_2 = 'O'
+        else:
+            player_2 = 'X'
     return player_1, player_2
 
 
@@ -150,6 +152,7 @@ def replay():
 
     while choice not in ['Y', 'N']:
         choice = input("Do you want to replay [Y or N]: ")
+        choice = choice.upper()
         if choice not in ['Y', 'N']:
             print("Sorry, I don't understand. Please choose Y or N")
     if choice == 'Y':
@@ -217,6 +220,7 @@ while game_on:
             else:
                 break
         elif full_board_check_2(game_board):
+            print("Game has resulted in a draw")
             if replay():
                 game_board.clear()
                 game_board = legacy_board.copy()
