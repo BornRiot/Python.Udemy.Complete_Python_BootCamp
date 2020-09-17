@@ -57,11 +57,12 @@ def ask_for_int2():
     while True:
         try:
             result = int(input("Please enter a number:"))
-            print(result)
+            
         except:
             print("Whoops! That is not a number ")
             continue
         else:
+            print(result)
             print("Yes, thank you!")
             break
         finally:
