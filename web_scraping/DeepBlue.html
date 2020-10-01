@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Deep Blue (chess computer) - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"84e42aa3-6583-45cf-a266-baebf363a1b5","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Deep_Blue_(chess_computer)","wgTitle":"Deep Blue (chess computer)","wgCurRevisionId":976531076,"wgRevisionId":976531076,"wgArticleId":49387,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: unfit url","Webarchive template wayback links","CS1 errors: missing periodical","Articles with short description","Short description is different from Wikidata","Use dmy dates from May 2017","CS1 maint: ref=harv","Wikipedia articles with LCCN identifiers",
+"History of chess","Chess computers","One-of-a-kind computers","IBM supercomputers"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Deep_Blue_(chess_computer)","wgRelevantArticleId":49387,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q187899"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":
+"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.scribunto.logs","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns",
+"ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.9"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chess_Programming.svg/1200px-Chess_Programming.svg.png"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Deep_Blue_(chess_computer)"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Deep_Blue_chess_computer rootpage-Deep_Blue_chess_computer skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Deep Blue (chess computer)</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Chess-playing computer made by IBM</div>
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><td style="padding-top:0.4em;line-height:1.2em">This article is part of the series on</td></tr><tr><th style="padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em"><a href="/wiki/Chess_programming" class="mw-redirect" title="Chess programming">Chess programming</a></th></tr><tr><td style="padding:0.2em 0 0.4em"><a href="/wiki/File:Chess_Programming.svg" class="image"><img alt="Chess Programming.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chess_Programming.svg/150px-Chess_Programming.svg.png" decoding="async" width="150" height="150" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chess_Programming.svg/225px-Chess_Programming.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/52/Chess_Programming.svg/300px-Chess_Programming.svg.png 2x" data-file-width="60" data-file-height="60" /></a></td></tr><tr><th class="navbox-title" style="padding:0.1em">
+<a href="/wiki/Board_representation_(computer_chess)" title="Board representation (computer chess)">Board representations</a></th></tr><tr><td class="plainlist" style="padding:0 0.1em 0.4em;text-align:left;text-align:center">
+<dl><dd><a href="/wiki/0x88" title="0x88">0x88</a></dd>
+<dd><a href="/wiki/Chess_bitboard" class="mw-redirect" title="Chess bitboard">Bitboards</a></dd></dl></td>
+</tr><tr><th class="navbox-title" style="padding:0.1em">
+<a href="/wiki/Chess_computer" class="mw-redirect" title="Chess computer">Chess computers</a></th></tr><tr><td class="plainlist" style="padding:0 0.1em 0.4em;text-align:left;text-align:center">
+<dl><dd><a href="/wiki/Belle_(chess_machine)" title="Belle (chess machine)">Belle</a></dd>
+<dd><a class="mw-selflink selflink">Deep Blue</a></dd></dl></td>
+</tr><tr><th class="navbox-title" style="padding:0.1em">
+<a href="/wiki/Chess_engine" title="Chess engine">Chess engines</a></th></tr><tr><td class="plainlist" style="padding:0 0.1em 0.4em;text-align:left;text-align:center">
+<dl><dd><a href="/wiki/Fritz_(chess)" title="Fritz (chess)">Fritz</a></dd>
+<dd><a href="/wiki/GNU_Chess" title="GNU Chess">GNU Chess</a></dd>
+<dd><a href="/wiki/Leela_Chess_Zero" title="Leela Chess Zero">Leela Chess Zero</a></dd>
+<dd><a href="/wiki/Stockfish_(chess)" title="Stockfish (chess)">Stockfish</a></dd></dl></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Chess_programming_series" title="Template:Chess programming series"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/w/index.php?title=Template_talk:Chess_programming_series&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Chess programming series (page does not exist)"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Chess_programming_series&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Deep_Blue.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/220px-Deep_Blue.jpg" decoding="async" width="220" height="331" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Deep_Blue.jpg/330px-Deep_Blue.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/b/be/Deep_Blue.jpg 2x" data-file-width="400" data-file-height="601" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Deep_Blue.jpg" class="internal" title="Enlarge"></a></div>One of 2 racks of Deep Blue, at the <a href="/wiki/Computer_History_Museum" title="Computer History Museum">Computer History Museum</a></div></div></div>
+<p><b>Deep Blue</b> was a <a href="/wiki/Computer_chess" title="Computer chess">chess-playing computer</a> developed by <a href="/wiki/IBM" title="IBM">IBM</a>. It is known for being the first computer chess-playing system to win both a <a href="/wiki/Chess_game" class="mw-redirect" title="Chess game">chess game</a> and a <a href="/wiki/Chess_match" class="mw-redirect" title="Chess match">chess match</a> against a reigning world champion under regular time controls.
+</p><p>Development for Deep Blue began in 1985 with the <a href="/wiki/ChipTest" title="ChipTest">ChipTest</a> project at <a href="/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</a>; Grandmaster <a href="/wiki/Joel_Benjamin" title="Joel Benjamin">Joel Benjamin</a> was part of the development team. IBM hired the development team when the project was briefly given the name <a href="/wiki/Deep_Thought_(chess_computer)" title="Deep Thought (chess computer)">Deep Thought</a>. In 1989 it was renamed Deep Blue.
+</p><p>Deep Blue won its first game against world champion <a href="/wiki/Garry_Kasparov" title="Garry Kasparov">Garry Kasparov</a> in <a href="/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1" title="Deep Blue versus Kasparov, 1996, Game 1">game one</a> of a six-game match on 10 February 1996. However, Kasparov won three and drew two of the following five games, defeating Deep Blue by a score of 4–2. Deep Blue was heavily upgraded before playing against Kasparov again in May 1997. Deep Blue won <a href="/wiki/Deep_Blue_versus_Kasparov,_1997,_Game_6" title="Deep Blue versus Kasparov, 1997, Game 6">game six</a>, thereby winning the six-game rematch 3½–2½ and becoming the first computer system to defeat a reigning world champion in a match under standard chess tournament time controls.
+Kasparov accused IBM of <a href="/wiki/Cheating" title="Cheating">cheating</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Origins"><span class="tocnumber">1</span> <span class="toctext">Origins</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Design"><span class="tocnumber">2</span> <span class="toctext">Design</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Deep_Blue_versus_Kasparov"><span class="tocnumber">3</span> <span class="toctext">Deep Blue versus Kasparov</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Aftermath"><span class="tocnumber">4</span> <span class="toctext">Aftermath</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Bibliography"><span class="tocnumber">6.1</span> <span class="toctext">Bibliography</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Origins">Origins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=1" title="Edit section: Origins">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The project started under the name <a href="/wiki/ChipTest" title="ChipTest">ChipTest</a> at <a href="/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</a> by <a href="/wiki/Feng-hsiung_Hsu" title="Feng-hsiung Hsu">Feng-hsiung Hsu</a> and was followed by ChipTest’s successor, <a href="/wiki/Deep_Thought_(chess_computer)" title="Deep Thought (chess computer)">Deep Thought</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> After graduating the university, Hsu, <a href="/wiki/Thomas_Anantharaman" title="Thomas Anantharaman">Thomas Anantharaman</a>, and <a href="/wiki/Murray_Campbell" title="Murray Campbell">Murray Campbell</a>  were asked by <a href="/wiki/IBM_Research" title="IBM Research">IBM Research</a> to continue their project to build a chess machine that could defeat a world champion.<sup id="cite_ref-Hsu-IBMHiring_2-0" class="reference"><a href="#cite_note-Hsu-IBMHiring-2">&#91;2&#93;</a></sup> Hsu and Campbell joined IBM in fall 1989, with Anantharaman following later.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> Anantharaman subsequently left IBM for Wall Street and Arthur Joseph Hoane joined the team to perform programming tasks.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> Jerry Brody, a long-time employee of IBM Research, was recruited to the team in 1990.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> The team was first managed by Randy Moulic, followed by Chung-Jen (C J) Tan.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>After Deep Thought's 1989 match against Kasparov, IBM held a contest to rename the chess machine: the winning name was "Deep Blue", a play on IBM's nickname, "Big Blue".<sup id="cite_ref-Hsu-DeepBlueName_7-0" class="reference"><a href="#cite_note-Hsu-DeepBlueName-7">&#91;7&#93;</a></sup> After a scaled-down version of Deep Blue—Deep Blue Jr.—played Grandmaster <a href="/wiki/Joel_Benjamin" title="Joel Benjamin">Joel Benjamin</a>,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> Hsu and Campbell decided that Benjamin was the expert they were looking for to develop Deep Blue's <a href="/wiki/Chess_opening_book_(computers)" title="Chess opening book (computers)">opening book</a>, and Benjamin was signed by IBM Research to assist with the preparations for Deep Blue's matches against Garry Kasparov.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p><p>In 1995 "Deep Blue prototype" played in the 8th <a href="/wiki/World_Computer_Chess_Championship" title="World Computer Chess Championship">World Computer Chess Championship</a>. The Deep Blue prototype played <a href="/wiki/Power_Chess" title="Power Chess">Wchess</a> to a draw. In round 5, Deep Blue prototype played as <a href="/wiki/White_and_Black_in_chess" title="White and Black in chess">White</a> and lost to <a href="/wiki/Fritz_(chess)" title="Fritz (chess)">Fritz</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Design">Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=2" title="Edit section: Design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Deep Blue used custom <a href="/wiki/VLSI" class="mw-redirect" title="VLSI">VLSI</a> chips to execute the <a href="/wiki/Alpha%E2%80%93beta_pruning" title="Alpha–beta pruning">alpha-beta search</a> algorithm in <a href="/wiki/Parallel_computing" title="Parallel computing">parallel</a>,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> an example of <a href="/wiki/GOFAI" class="mw-redirect" title="GOFAI">GOFAI</a> (Good Old-Fashioned Artificial Intelligence) rather than of <a href="/wiki/Deep_learning" title="Deep learning">deep learning</a> which would come a decade later. It was a <a href="/wiki/Brute-force_search" title="Brute-force search">brute-force search</a> approach, and one of its developers even denied that it was <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a>.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p><p>The system derived its playing strength mainly from <a href="/wiki/Brute-force_search" title="Brute-force search">brute force</a> computing power. It was a <a href="/wiki/Massively_parallel" title="Massively parallel">massively parallel</a>, <a href="/wiki/IBM_Scalable_POWERparallel" title="IBM Scalable POWERparallel">RS/6000 SP Thin P2SC</a>-based system with 30 nodes, with each node containing a 120&#160;MHz <a href="/wiki/POWER2" title="POWER2">P2SC</a> <a href="/wiki/Microprocessor" title="Microprocessor">microprocessor</a> enhanced with 480 special purpose <a href="/wiki/Very-large-scale_integration" class="mw-redirect" title="Very-large-scale integration">VLSI</a> chess chips.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> Its chess playing program was written in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and ran under the <a href="/wiki/AIX_operating_system" class="mw-redirect" title="AIX operating system">AIX operating system</a>. It was capable of evaluating 200&#160;million positions per second, twice as fast as the 1996 version. In June 1997, Deep Blue was the 259th most powerful <a href="/wiki/Supercomputer" title="Supercomputer">supercomputer</a> according to the <a href="/wiki/TOP500" title="TOP500">TOP500</a> list, achieving 11.38 <a href="/wiki/GFLOPS" class="mw-redirect" title="GFLOPS">GFLOPS</a> on the High-Performance <a href="/wiki/LINPACK" title="LINPACK">LINPACK</a> benchmark.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</p><p>Deep Blue's <a href="/wiki/Evaluation_function" title="Evaluation function">evaluation function</a> was initially written in a generalized form, with many to-be-determined parameters (e.g., how important is a safe king position compared to a space advantage in the center, etc.). The system determined the optimal values for these parameters by analyzing thousands of master games. The evaluation function had been split into 8,000 parts, many of them designed for special positions. In the opening book there were over 4,000 positions and 700,000 <a href="/wiki/Grandmaster_(chess)" title="Grandmaster (chess)">grandmaster</a> games. The endgame database contained many six-piece endgames and five or fewer piece positions. Before the second match, the program's chess knowledge was fine-tuned by grandmaster <a href="/wiki/Joel_Benjamin" title="Joel Benjamin">Joel Benjamin</a>. The opening library was provided by grandmasters <a href="/wiki/Miguel_Illescas" title="Miguel Illescas">Miguel Illescas</a>, <a href="/wiki/John_Fedorowicz" title="John Fedorowicz">John Fedorowicz</a>, and <a href="/wiki/Nick_de_Firmian" title="Nick de Firmian">Nick de Firmian</a>.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> When Kasparov requested that he be allowed to study other games that Deep Blue had played so as to better understand his opponent, IBM refused. However, Kasparov studied many popular PC games to become familiar with computer gameplay in general.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p><p>Deep Blue takes an approach using the opening information in its database. It creates an additional database called the
+“extended book.” The extended book summarizes previous Grandmaster games in any of the several million opening positions in its game database. The system can combine its big searching ability (200 million chess positions per second) with the summary information in the extended book to select opening moves.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Deep_Blue_versus_Kasparov">Deep Blue versus Kasparov</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=3" title="Edit section: Deep Blue versus Kasparov">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Deep_Blue_versus_Garry_Kasparov" title="Deep Blue versus Garry Kasparov">Deep Blue versus Garry Kasparov</a></div>
+<p>Deep Blue and Kasparov played each other on two occasions. The first match began on 10 February 1996, in which Deep Blue became the first machine to win <a href="/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1" title="Deep Blue versus Kasparov, 1996, Game 1">a chess game against a reigning world champion</a> (Garry Kasparov) under <a href="/wiki/Rules_of_chess" title="Rules of chess">regular time controls</a>. However, Kasparov won three and drew two of the following five games, beating Deep Blue by a score of 4–2 (wins count as 1 point, draws count as a ½ point).  The match concluded on 17 February 1996.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p><p>After the match, Deep Blue was upgraded<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> (unofficially nicknamed "Deeper Blue")<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> and played Kasparov again in May 1997, winning the six-game rematch 3½–2½, ending on 11 May. Deep Blue won the deciding <a href="/wiki/Deep_Blue_versus_Kasparov,_1997,_Game_6" title="Deep Blue versus Kasparov, 1997, Game 6">game</a> after Kasparov made a mistake in the opening and became the first computer system to defeat a reigning world champion in a match under standard chess tournament time controls.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup> 
+</p><p>The Deep Blue chess computer that defeated Kasparov in 1997 would typically search to a depth of between six and eight moves to twenty or even more moves in some situations.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> <a href="/wiki/David_Levy_(chess_player)" title="David Levy (chess player)">David Levy</a> and <a href="/wiki/Monty_Newborn" title="Monty Newborn">Monty Newborn</a> estimate that one additional <a href="/wiki/Ply_(game_theory)" title="Ply (game theory)">ply</a> (half-move) increases the playing strength between 50 and 70 <a href="/wiki/Elo_rating_system" title="Elo rating system">Elo</a> points.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Kasparov_Magath_1985_Hamburg-2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kasparov_Magath_1985_Hamburg-2.png/220px-Kasparov_Magath_1985_Hamburg-2.png" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kasparov_Magath_1985_Hamburg-2.png/330px-Kasparov_Magath_1985_Hamburg-2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kasparov_Magath_1985_Hamburg-2.png/440px-Kasparov_Magath_1985_Hamburg-2.png 2x" data-file-width="800" data-file-height="600" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Kasparov_Magath_1985_Hamburg-2.png" class="internal" title="Enlarge"></a></div>Kasparov in 1985</div></div></div>
+<p>Writer <a href="/wiki/Nate_Silver" title="Nate Silver">Nate Silver</a> suggests that a <a href="/wiki/Bug_(software)" class="mw-redirect" title="Bug (software)">bug</a> in Deep Blue's software led to a seemingly random move (the 44th in the first game of the second match) which Kasparov misattributed to "superior intelligence".<sup id="cite_ref-Roberts_25-0" class="reference"><a href="#cite_note-Roberts-25">&#91;25&#93;</a></sup><sup id="cite_ref-Plumer_26-0" class="reference"><a href="#cite_note-Plumer-26">&#91;26&#93;</a></sup> Subsequently, Kasparov experienced a decline in performance due to anxiety in the following game,<sup id="cite_ref-Plumer_26-1" class="reference"><a href="#cite_note-Plumer-26">&#91;26&#93;</a></sup> though he rejects this interpretation.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup>
+</p><p>After the loss, Kasparov said that he sometimes saw deep intelligence and creativity in the machine's moves, suggesting that during the second game, human chess players had intervened on behalf of the machine, which would be a violation of the rules. IBM denied that it cheated, saying the only human intervention occurred between games.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup><sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup> Kasparov demanded a rematch, but IBM had dismantled Deep Blue after its victory and refused the rematch.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup> The rules allowed the developers to modify the program between games, an opportunity they said they used to shore up weaknesses in the computer's play that were revealed during the course of the match. Kasparov requested printouts of the machine's log files, but IBM refused, although the company later published the logs on the Internet.<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Aftermath">Aftermath</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=4" title="Edit section: Aftermath">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Computer scientists believed that playing chess was a good measurement for the effectiveness of artificial intelligence, and by beating a world champion chess player, IBM showed that they had made significant progress.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup> Kasparov called Deep Blue an "alien opponent" but later stated that "It was as intelligent as your alarm clock".<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup> According to <a href="/wiki/Martin_Amis" title="Martin Amis">Martin Amis</a>, two grandmasters who played Deep Blue agreed with each other that "It's like a wall coming at you".<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup><sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;35&#93;</a></sup>
+</p><p>In 2003 a <a href="/wiki/Documentary_film" title="Documentary film">documentary film</a>—<i><a href="/wiki/Game_Over:_Kasparov_and_the_Machine" title="Game Over: Kasparov and the Machine">Game Over: Kasparov and the Machine</a></i>—was made that explored these claims. It interviewed some people who suggest that Deep Blue's victory was a ploy by IBM to boost its stock value.<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;36&#93;</a></sup>
+</p><p>One of the cultural impacts of Deep Blue was the creation of a new game called <a href="/wiki/Arimaa" title="Arimaa">Arimaa</a>, which was designed to be much more difficult for computers than chess.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;37&#93;</a></sup> Computers proved capable of defeating strong Arimaa players in 2015.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;38&#93;</a></sup>
+</p><p>One of the two racks that made up Deep Blue is on display at the <a href="/wiki/National_Museum_of_American_History" title="National Museum of American History">National Museum of American History</a>'s exhibit about the <a href="/wiki/Information_Age" title="Information Age">Information Age</a>;<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;39&#93;</a></sup> the other rack is displayed at the <a href="/wiki/Computer_History_Museum" title="Computer History Museum">Computer History Museum</a> in the Revolution exhibit's "Artificial Intelligence and Robotics" gallery.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;40&#93;</a></sup> Deep Blue was mistakenly reported to be sold to <a href="/wiki/United_Airlines" title="United Airlines">United Airlines</a> as it was confused with other <a href="/wiki/IBM_RISC_System/6000" title="IBM RISC System/6000">RS6000/SP2 systems</a> systems.<sup id="cite_ref-41" class="reference"><a href="#cite_note-41">&#91;41&#93;</a></sup>
+</p><p><a href="/wiki/Feng-hsiung_Hsu" title="Feng-hsiung Hsu">Feng-hsiung Hsu</a> later claimed in his book <i>Behind Deep Blue</i> that he had the rights to use the Deep Blue design to build a bigger machine independently of IBM to take Kasparov's rematch offer, but Kasparov refused a rematch.<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">&#91;42&#93;</a></sup>
+</p><p>Deep Blue, with its capability of evaluating 200&#160;million positions per second, was the first and fastest computer to face a world chess champion. Today, in computer-chess research and matches of world-class players against computers, the focus of play has shifted to software <a href="/wiki/Category:Chess_software" title="Category:Chess software">chess programs</a>, rather than using dedicated chess hardware. Modern chess programs like <a href="/wiki/Houdini_(chess)" title="Houdini (chess)">Houdini</a>, <a href="/wiki/Rybka" title="Rybka">Rybka</a>, <a href="/wiki/Fritz_(chess)" title="Fritz (chess)">Deep Fritz</a> or <a href="/wiki/Junior_(chess)" title="Junior (chess)">Deep Junior</a> are more efficient than the programs during Deep Blue's era. In a November 2006 match between Deep Fritz and world chess champion <a href="/wiki/Vladimir_Kramnik" title="Vladimir Kramnik">Vladimir Kramnik</a>, the program ran on a computer system containing a dual-core <a href="/wiki/List_of_Intel_Xeon_microprocessors#&quot;Woodcrest&quot;_(65_nm)" title="List of Intel Xeon microprocessors">Intel Xeon 5160</a> <a href="/wiki/Central_processing_unit" title="Central processing unit">CPU</a>, capable of evaluating only 8&#160;million positions per second, but searching to an average depth of 17 to 18 plies in the <a href="/wiki/Chess_middlegame" title="Chess middlegame">middlegame</a> thanks to <a href="/wiki/Heuristic" title="Heuristic">heuristics</a>; it won 4–2.<sup id="cite_ref-43" class="reference"><a href="#cite_note-43">&#91;43&#93;</a></sup><sup id="cite_ref-44" class="reference"><a href="#cite_note-44">&#91;44&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/AlphaGo" title="AlphaGo">AlphaGo</a></li>
+<li><a href="/wiki/Anti-computer_tactics" title="Anti-computer tactics">Anti-computer tactics</a></li>
+<li><a href="/wiki/The_Turk" title="The Turk">The Turk</a></li>
+<li><a href="/wiki/Watson_(computer)" title="Watson (computer)">Watson (computer)</a></li>
+<li><a href="/wiki/X3D_Fritz" title="X3D Fritz">X3D Fritz</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFWarwick2017" class="citation news cs1">Warwick, Kevin (29 July 2017). <a rel="nofollow" class="external text" href="http://mentalfloss.com/article/503178/brief-history-deep-blue-ibms-chess-computer">"A Brief History of Deep Blue, IBM's Chess Computer"</a>. <i><a href="/wiki/Mental_Floss" title="Mental Floss">Mental Floss</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">3 August</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Mental+Floss&amp;rft.atitle=A+Brief+History+of+Deep+Blue%2C+IBM%27s+Chess+Computer&amp;rft.date=2017-07-29&amp;rft.aulast=Warwick&amp;rft.aufirst=Kevin&amp;rft_id=http%3A%2F%2Fmentalfloss.com%2Farticle%2F503178%2Fbrief-history-deep-blue-ibms-chess-computer&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-Hsu-IBMHiring-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hsu-IBMHiring_2-0">^</a></b></span> <span class="reference-text">Hsu 2002, pp. 92–95</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Hsu 2002, p. 107</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Hsu 2002, p. 132</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFIBM" class="citation web cs1">IBM. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20081212221319/http://www.research.ibm.com/deepblue/meet/html/d.4.2.html">"Deep Blue – Overview"</a>. IBM Research. Archived from <a rel="nofollow" class="external text" href="http://www.research.ibm.com/deepblue/meet/html/d.4.2.html">the original</a> on 12 December 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">19 August</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Deep+Blue+%E2%80%93+Overview&amp;rft.pub=IBM+Research&amp;rft.au=IBM&amp;rft_id=http%3A%2F%2Fwww.research.ibm.com%2Fdeepblue%2Fmeet%2Fhtml%2Fd.4.2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Hsu 2002, p. 136</span>
+</li>
+<li id="cite_note-Hsu-DeepBlueName-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hsu-DeepBlueName_7-0">^</a></b></span> <span class="reference-text">Hsu 2002, pp. 126–127</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.computerhistory.org/chess/stl-431614f67f976/">"Joel Benjamin playing a practice game with Deep Blue | Mastering the Game | Computer History Museum"</a>. <i>www.computerhistory.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">17 February</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.computerhistory.org&amp;rft.atitle=Joel+Benjamin+playing+a+practice+game+with+Deep+Blue+%7C+Mastering+the+Game+%7C+Computer+History+Museum&amp;rft_id=https%3A%2F%2Fwww.computerhistory.org%2Fchess%2Fstl-431614f67f976%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Hsu 2002, pp. 160–161, 174, 177, 193</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20081007035001/http://www.grappa.univ-lille3.fr/icga/tournament.php?id=29">"8th World Computer Chess Championship"</a>. <i>ICGA Tournaments</i>. Archived from <a rel="nofollow" class="external text" href="http://www.grappa.univ-lille3.fr/icga/tournament.php?id=29">the original</a> on 7 October 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">4 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ICGA+Tournaments&amp;rft.atitle=8th+World+Computer+Chess+Championship&amp;rft_id=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2Ficga%2Ftournament.php%3Fid%3D29&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite id="CITEREFHsuCampbell1995" class="citation conference cs1">Hsu, Feng-hsiung; Campbell, Murray (1995). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20181017043132/http://www.top-5000.nl/ps/Deep%20blue%20system%20overview.pdf">"Deep Blue System Overview"</a> <span class="cs1-format">(PDF)</span>. <i>Proceedings of the 9th International Conference on Supercomputing</i>. ACM. pp.&#160;240–244. Archived from the original on 17 October 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Deep+Blue+System+Overview&amp;rft.btitle=Proceedings+of+the+9th+International+Conference+on+Supercomputing&amp;rft.pages=240-244&amp;rft.pub=ACM&amp;rft.date=1995&amp;rft.aulast=Hsu&amp;rft.aufirst=Feng-hsiung&amp;rft.au=Campbell%2C+Murray&amp;rft_id=http%3A%2F%2Fwww.top-5000.nl%2Fps%2FDeep%2520blue%2520system%2520overview.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: unfit url (<a href="/wiki/Category:CS1_maint:_unfit_url" title="Category:CS1 maint: unfit url">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite id="CITEREFPress2018" class="citation web cs1">Press, Gil (7 February 2018). <a rel="nofollow" class="external text" href="https://www.forbes.com/sites/gilpress/2018/02/07/the-brute-force-of-deep-blue-and-deep-learning/">"The Brute Force of IBM Deep Blue And Google DeepMind"</a>. <i>forbes.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">12 May</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=forbes.com&amp;rft.atitle=The+Brute+Force+of+IBM+Deep+Blue+And+Google+DeepMind&amp;rft.date=2018-02-07&amp;rft.aulast=Press&amp;rft.aufirst=Gil&amp;rft_id=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fgilpress%2F2018%2F02%2F07%2Fthe-brute-force-of-deep-blue-and-deep-learning%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite id="CITEREFHsu199" class="citation web cs1">Hsu, Feng-hsiung (199). <a rel="nofollow" class="external text" href="http://www.csis.pace.edu/~ctappert/dps/pdf/ai-chess-deep.pdf">"IBM's Deep Blue Chess Grandmaster Chips"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">17 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=IBM%27s+Deep+Blue+Chess+Grandmaster+Chips&amp;rft.date=199&amp;rft.aulast=Hsu&amp;rft.aufirst=Feng-hsiung&amp;rft_id=http%3A%2F%2Fwww.csis.pace.edu%2F~ctappert%2Fdps%2Fpdf%2Fai-chess-deep.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite id="CITEREFKhosrow-Pour2017" class="citation book cs1">Khosrow-Pour, Mehdi (2017). <a rel="nofollow" class="external text" href="https://www.google.com/books/edition/Encyclopedia_of_Information_Science_and/kvIoDwAAQBAJ?hl=en&amp;gbpv=1"><i>Encyclopedia of Information Science and Technology</i></a>. p.&#160;234<span class="reference-accessdate">. Retrieved <span class="nowrap">19 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Encyclopedia+of+Information+Science+and+Technology&amp;rft.pages=234&amp;rft.date=2017&amp;rft.aulast=Khosrow-Pour&amp;rft.aufirst=Mehdi&amp;rft_id=https%3A%2F%2Fwww.google.com%2Fbooks%2Fedition%2FEncyclopedia_of_Information_Science_and%2FkvIoDwAAQBAJ%3Fhl%3Den%26gbpv%3D1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090213103245/http://www.top500.org/list/1997/06/300">"TOP500 List - June 1997 (201-300)"</a>. <i>Top 500</i>. 13 February 2009. Archived from <a rel="nofollow" class="external text" href="http://www.top500.org/list/1997/06/300">the original</a> on 13 February 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">10 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Top+500&amp;rft.atitle=TOP500+List+-+June+1997+%28201-300%29&amp;rft.date=2009-02-13&amp;rft_id=http%3A%2F%2Fwww.top500.org%2Flist%2F1997%2F06%2F300&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite id="CITEREFWeber1997" class="citation news cs1">Weber, Bruce (18 May 1997). <a rel="nofollow" class="external text" href="https://www.nytimes.com/1997/05/18/nyregion/what-deep-blue-learned-in-chess-school.html">"What Deep Blue Learned in Chess School"</a>. <i>The New York Times</i>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0362-4331">0362-4331</a><span class="reference-accessdate">. Retrieved <span class="nowrap">4 July</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+York+Times&amp;rft.atitle=What+Deep+Blue+Learned+in+Chess+School&amp;rft.date=1997-05-18&amp;rft.issn=0362-4331&amp;rft.aulast=Weber&amp;rft.aufirst=Bruce&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F1997%2F05%2F18%2Fnyregion%2Fwhat-deep-blue-learned-in-chess-school.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite id="CITEREFWeber1997" class="citation web cs1">Weber, Bruce (5 May 1997). <a rel="nofollow" class="external text" href="https://www.nytimes.com/1997/05/05/nyregion/computer-defeats-kasparov-stunning-the-chess-experts.html">"Computer Defeats Kasparov, Stunning the Chess Experts"</a>. <i>New York Times</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=New+York+Times&amp;rft.atitle=Computer+Defeats+Kasparov%2C+Stunning+the+Chess+Experts&amp;rft.date=1997-05-05&amp;rft.aulast=Weber&amp;rft.aufirst=Bruce&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F1997%2F05%2F05%2Fnyregion%2Fcomputer-defeats-kasparov-stunning-the-chess-experts.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite id="CITEREFCampbell1999" class="citation news cs1">Campbell, Murray (November 1999). "COMMUNICATIONS OF THE ACM". <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F319382.319396">10.1145/319382.319396</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=COMMUNICATIONS+OF+THE+ACM&amp;rft.date=1999-11&amp;rft_id=info%3Adoi%2F10.1145%2F319382.319396&amp;rft.aulast=Campbell&amp;rft.aufirst=Murray&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite id="CITEREFNewborn1997" class="citation book cs1">Newborn, Monty (1997). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=IiXjBwAAQBAJ&amp;pg=PA2&amp;dq=Deep+Blue+and+Kasparov+#v=onepage"><i>Kasparov versus Deep Blue: Computer Chess Comes of Age</i></a> (1st ed.). p.&#160;287. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781461222606" title="Special:BookSources/9781461222606"><bdi>9781461222606</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">12 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Kasparov+versus+Deep+Blue%3A+Computer+Chess+Comes+of+Age&amp;rft.pages=287&amp;rft.edition=1st&amp;rft.date=1997&amp;rft.isbn=9781461222606&amp;rft.aulast=Newborn&amp;rft.aufirst=Monty&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DIiXjBwAAQBAJ%26pg%3DPA2%26dq%3DDeep%2BBlue%2Band%2BKasparov%2B%23v%3Donepage&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite id="CITEREFMcpheeK.C._BakerSiemaszko2015" class="citation news cs1">Mcphee, Michele; K.C. Baker; Siemaszko, Corky (10 May 2015). <a rel="nofollow" class="external text" href="http://www.nydailynews.com/news/world/kasparov-deep-blues-losingchess-champ-rooke-article-1.762264">"IBM's Deep Blue beats chess champion Garry Kasparov in 1997"</a>. <i><a href="/wiki/NY_Daily_News" class="mw-redirect" title="NY Daily News">NY Daily News</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">3 August</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=NY+Daily+News&amp;rft.atitle=IBM%27s+Deep+Blue+beats+chess+champion+Garry+Kasparov+in+1997&amp;rft.date=2015-05-10&amp;rft.aulast=Mcphee&amp;rft.aufirst=Michele&amp;rft.au=K.C.+Baker&amp;rft.au=Siemaszko%2C+Corky&amp;rft_id=http%3A%2F%2Fwww.nydailynews.com%2Fnews%2Fworld%2Fkasparov-deep-blues-losingchess-champ-rooke-article-1.762264&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.research.ibm.com/deepblue/games/game2/html/c.2.shtml">IBM Research Game 2</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20071019031508/http://www.research.ibm.com/deepblue/games/game2/html/c.2.shtml">Archived</a> 19 October 2007 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, Deep Blue <a href="/wiki/IBM" title="IBM">IBM</a></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite id="CITEREFSaletan2007" class="citation magazine cs1"><a href="/wiki/William_Saletan" title="William Saletan">Saletan, William</a> (11 May 2007). <a rel="nofollow" class="external text" href="http://www.slate.com/id/2166000/">"Chess Bump: The triumphant teamwork of humans and computers"</a>. <i><a href="/wiki/Slate_(magazine)" title="Slate (magazine)">Slate</a></i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070513035007/http://www.slate.com/id/2166000/">Archived</a> from the original on 13 May 2007.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Slate&amp;rft.atitle=Chess+Bump%3A+The+triumphant+teamwork+of+humans+and+computers&amp;rft.date=2007-05-11&amp;rft.aulast=Saletan&amp;rft.aufirst=William&amp;rft_id=http%3A%2F%2Fwww.slate.com%2Fid%2F2166000%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text">Campbell 1998, p. 88.</span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text">Levy &amp; Newborn 1991, p. 192</span>
+</li>
+<li id="cite_note-Roberts-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-Roberts_25-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFRoberts2016" class="citation journal cs1">Roberts, Jacob (2016). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20180819152455/https://www.sciencehistory.org/distillations/magazine/thinking-machines-the-search-for-artificial-intelligence">"Thinking Machines: The Search for Artificial Intelligence"</a>. <i>Distillations</i>. <b>2</b> (2): 14–23. Archived from <a rel="nofollow" class="external text" href="https://www.sciencehistory.org/distillations/magazine/thinking-machines-the-search-for-artificial-intelligence">the original</a> on 19 August 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">22 March</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Distillations&amp;rft.atitle=Thinking+Machines%3A+The+Search+for+Artificial+Intelligence&amp;rft.volume=2&amp;rft.issue=2&amp;rft.pages=14-23&amp;rft.date=2016&amp;rft.aulast=Roberts&amp;rft.aufirst=Jacob&amp;rft_id=https%3A%2F%2Fwww.sciencehistory.org%2Fdistillations%2Fmagazine%2Fthinking-machines-the-search-for-artificial-intelligence&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-Plumer-26"><span class="mw-cite-backlink">^ <a href="#cite_ref-Plumer_26-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Plumer_26-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFPlumer2012" class="citation web cs1">Plumer, Brad (26 September 2012). <a rel="nofollow" class="external text" href="https://www.washingtonpost.com/blogs/ezra-klein/wp/2012/09/26/nate-silvers-the-signal-and-the-noise/">"Nate Silver's 'The Signal and the Noise<span class="cs1-kern-right">'</span>"</a>. Washingtonpost.com. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121109100324/http://www.washingtonpost.com/blogs/ezra-klein/wp/2012/09/26/nate-silvers-the-signal-and-the-noise/">Archived</a> from the original on 9 November 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">5 January</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Nate+Silver%27s+%27The+Signal+and+the+Noise%27&amp;rft.pub=Washingtonpost.com&amp;rft.date=2012-09-26&amp;rft.aulast=Plumer&amp;rft.aufirst=Brad&amp;rft_id=https%3A%2F%2Fwww.washingtonpost.com%2Fblogs%2Fezra-klein%2Fwp%2F2012%2F09%2F26%2Fnate-silvers-the-signal-and-the-noise%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation book cs1"><i>LC Catalog - Item Information (Full Record)</i>. <a href="/wiki/LCCN_(identifier)" class="mw-redirect" title="LCCN (identifier)">LCCN</a>&#160;<a rel="nofollow" class="external text" href="//lccn.loc.gov/2017304768">2017304768</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=LC+Catalog+-+Item+Information+%28Full+Record%29&amp;rft_id=info%3Alccn%2F2017304768&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite id="CITEREFSilver2015" class="citation web cs1">Silver, Albert (19 February 2015). <a rel="nofollow" class="external text" href="https://en.chessbase.com/post/deep-blue-s-cheating-move">"Deep Blue's cheating move"</a>. <i>Chess Base</i>. Chess News<span class="reference-accessdate">. Retrieved <span class="nowrap">3 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Chess+Base&amp;rft.atitle=Deep+Blue%27s+cheating+move&amp;rft.date=2015-02-19&amp;rft.aulast=Silver&amp;rft.aufirst=Albert&amp;rft_id=https%3A%2F%2Fen.chessbase.com%2Fpost%2Fdeep-blue-s-cheating-move&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite id="CITEREFHsu2004" class="citation book cs1">Hsu, Feng-Hsiung (2004). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=WOk9DwAAQBAJ&amp;pg=PR10"><i>Behind Deep Blue: Building the Computer that Defeated the World Chess Champion</i></a> (revised ed.). Princeton University Press. p.&#160;x (Preface). <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0691118185" title="Special:BookSources/978-0691118185"><bdi>978-0691118185</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Behind+Deep+Blue%3A+Building+the+Computer+that+Defeated+the+World+Chess+Champion&amp;rft.pages=x+%28Preface%29&amp;rft.edition=revised&amp;rft.pub=Princeton+University+Press&amp;rft.date=2004&amp;rft.isbn=978-0691118185&amp;rft.aulast=Hsu&amp;rft.aufirst=Feng-Hsiung&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DWOk9DwAAQBAJ%26pg%3DPR10&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite id="CITEREFWarwick2004" class="citation book cs1">Warwick, Kevin (2004). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=6Ya1yGJOapMC&amp;pg=PA95&amp;lpg=PA95&amp;dq=did+IBM+dismantle+Deep+Blue#v=onepage"><i>I, Cyborg</i></a>. University of Illinois Press. p.&#160;95. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0252072154" title="Special:BookSources/0252072154"><bdi>0252072154</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">10 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=I%2C+Cyborg&amp;rft.pages=95&amp;rft.pub=University+of+Illinois+Press&amp;rft.date=2004&amp;rft.isbn=0252072154&amp;rft.aulast=Warwick&amp;rft.aufirst=Kevin&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D6Ya1yGJOapMC%26pg%3DPA95%26lpg%3DPA95%26dq%3Ddid%2BIBM%2Bdismantle%2BDeep%2BBlue%23v%3Donepage&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20080701232743/http://www.research.ibm.com/deepblue/watch/html/c.shtml">"Deep Blue - Replay the Games"</a>. <i>IBM Research</i>. Archived from <a rel="nofollow" class="external text" href="http://www.research.ibm.com/deepblue/watch/html/c.shtml">the original</a> on 1 July 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">10 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IBM+Research&amp;rft.atitle=Deep+Blue+-+Replay+the+Games&amp;rft_id=http%3A%2F%2Fwww.research.ibm.com%2Fdeepblue%2Fwatch%2Fhtml%2Fc.shtml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite id="CITEREFGreenemeier" class="citation news cs1">Greenemeier, Larry. <a rel="nofollow" class="external text" href="https://www.scientificamerican.com/article/20-years-after-deep-blue-how-ai-has-advanced-since-conquering-chess/">"20 Years after Deep Blue: How AI Has Advanced Since Conquering Chess"</a>. <i>Scientific American</i><span class="reference-accessdate">. Retrieved <span class="nowrap">29 June</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Scientific+American&amp;rft.atitle=20+Years+after+Deep+Blue%3A+How+AI+Has+Advanced+Since+Conquering+Chess&amp;rft.aulast=Greenemeier&amp;rft.aufirst=Larry&amp;rft_id=https%3A%2F%2Fwww.scientificamerican.com%2Farticle%2F20-years-after-deep-blue-how-ai-has-advanced-since-conquering-chess%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation news cs1"><a rel="nofollow" class="external text" href="https://www.reuters.com/article/us-sport-anniversary-kasparov/on-this-day-born-april-13-1963-russian-chess-champion-garry-kasparov-idUSKCN21U060">"On this day: Born April 13, 1963; Russian chess champion Garry Kasparov"</a>. <i>Reuters</i>. 12 April 2020<span class="reference-accessdate">. Retrieved <span class="nowrap">28 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Reuters&amp;rft.atitle=On+this+day%3A+Born+April+13%2C+1963%3B+Russian+chess+champion+Garry+Kasparov&amp;rft.date=2020-04-12&amp;rft_id=https%3A%2F%2Fwww.reuters.com%2Farticle%2Fus-sport-anniversary-kasparov%2Fon-this-day-born-april-13-1963-russian-chess-champion-garry-kasparov-idUSKCN21U060&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite id="CITEREFMann2011" class="citation book cs1">Mann, Windsor, ed. (2011). <i>The Quotable Hitchens: From Alcohol to Zionism</i>. Da Capo Press/<a href="/wiki/Hachette_Books" title="Hachette Books">Hachette Books</a>. p.&#160;vii. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780306819834" title="Special:BookSources/9780306819834"><bdi>9780306819834</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Quotable+Hitchens%3A+From+Alcohol+to+Zionism&amp;rft.pages=vii&amp;rft.pub=Da+Capo+Press%2FHachette+Books&amp;rft.date=2011&amp;rft.isbn=9780306819834&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite id="CITEREFBarrat2013" class="citation book cs1">Barrat, James (2013). <i><a href="/wiki/Our_Final_Invention" title="Our Final Invention">Our Final Invention</a></i> (Kindle ed.). St. Martin's Press. p.&#160;13.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Our+Final+Invention&amp;rft.pages=13&amp;rft.edition=Kindle&amp;rft.pub=St.+Martin%27s+Press&amp;rft.date=2013&amp;rft.aulast=Barrat&amp;rft.aufirst=James&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20071012234501/http://chess.about.com/library/weekly/aa05f04.htm">"<span class="cs1-kern-left">'</span>Game Over'&#160;: Did IBM Cheat Kasparov?"</a>. Archived from <a rel="nofollow" class="external text" href="http://chess.about.com/library/weekly/aa05f04.htm">the original</a> on 12 October 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">4 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%27Game+Over%27+%3A+Did+IBM+Cheat+Kasparov%3F&amp;rft_id=http%3A%2F%2Fchess.about.com%2Flibrary%2Fweekly%2Faa05f04.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140330200410/">"IBM100"</a>. Archived from <a rel="nofollow" class="external text" href="https://web.archive.org/web/20140330200410/http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/impacts/">the original</a> on 30 March 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">5 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=IBM100&amp;rft_id=https%3A%2F%2Fweb.archive.org%2Fweb%2F20140330200410%2Fhttp%3A%2F%2Fwww-03.ibm.com%2Fibm%2Fhistory%2Fibm100%2Fus%2Fen%2Ficons%2Fdeepblue%2Fimpacts%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text">Wu, David J. "Designing a winning Arimaa program." ICGA Journal 38, no. 1 (2015): 19-40.</span>
+</li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://americanhistory.si.edu/collections/search/object/nmah_1005331">"Deep Blue Supercomputer Tower"</a>. <i>National Museum of American History</i><span class="reference-accessdate">. Retrieved <span class="nowrap">1 February</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=National+Museum+of+American+History&amp;rft.atitle=Deep+Blue+Supercomputer+Tower&amp;rft_id=http%3A%2F%2Famericanhistory.si.edu%2Fcollections%2Fsearch%2Fobject%2Fnmah_1005331&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.computerhistory.org/chess/art-43305f13ef377/">"Deep Blue II"</a>. <i>Computer History Museum</i><span class="reference-accessdate">. Retrieved <span class="nowrap">8 June</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Computer+History+Museum&amp;rft.atitle=Deep+Blue+II&amp;rft_id=https%3A%2F%2Fwww.computerhistory.org%2Fchess%2Fart-43305f13ef377%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><cite class="citation news cs1"><a rel="nofollow" class="external text" href="http://articles.orlandosentinel.com/1997-12-07/business/9712051019_1_yield-management-airline-yield-management-systems">"Deep Blue Skies: Ibm Helps Airline"</a>. <i><a href="/wiki/Orlando_Sentinel" title="Orlando Sentinel">Orlando Sentinel</a></i>. 7 December 1997. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20130511053406/http://articles.orlandosentinel.com/1997-12-07/business/9712051019_1_yield-management-airline-yield-management-systems">Archived</a> from the original on 11 May 2013.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Orlando+Sentinel&amp;rft.atitle=Deep+Blue+Skies%3A+Ibm+Helps+Airline&amp;rft.date=1997-12-07&amp;rft_id=http%3A%2F%2Farticles.orlandosentinel.com%2F1997-12-07%2Fbusiness%2F9712051019_1_yield-management-airline-yield-management-systems&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1"><a rel="nofollow" class="external text" href="http://www.chess.co.uk/twic/owenfeng.html">"Owen Williams replies to Feng-hsiung Hsu"</a>. The Week in Chess. 13 January 2000. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120729131411/http://www.chess.co.uk/twic/owenfeng.html">Archived</a> from the original on 29 July 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">11 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Owen+Williams+replies+to+Feng-hsiung+Hsu&amp;rft.date=2000-01-13&amp;rft_id=http%3A%2F%2Fwww.chess.co.uk%2Ftwic%2Fowenfeng.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1"><a rel="nofollow" class="external text" href="http://www.chessbase.com/newsdetail.asp?newsid=3504">"The last match man vs machine?"</a>. <i>English translation of Spiegel Article</i>. ChessBase. 23 November 2006. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121016172318/http://www.chessbase.com/newsdetail.asp?newsid=3504">Archived</a> from the original on 16 October 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=English+translation+of+Spiegel+Article&amp;rft.atitle=The+last+match+man+vs+machine%3F&amp;rft.date=2006-11-23&amp;rft_id=http%3A%2F%2Fwww.chessbase.com%2Fnewsdetail.asp%3Fnewsid%3D3504&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><cite class="citation news cs1"><a rel="nofollow" class="external text" href="http://news.bbc.co.uk/2/hi/europe/6212076.stm">"Chess champion loses to computer"</a>. <i><a href="/wiki/BBC_News" title="BBC News">BBC News</a></i>. 5 December 2006. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20071231112514/http://news.bbc.co.uk/2/hi/europe/6212076.stm">Archived</a> from the original on 31 December 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">4 May</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+News&amp;rft.atitle=Chess+champion+loses+to+computer&amp;rft.date=2006-12-05&amp;rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F2%2Fhi%2Feurope%2F6212076.stm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+</ol></div></div>
+<h3><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=7" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><cite id="CITEREFHsu2002" class="citation book cs1"><a href="/wiki/Feng-hsiung_Hsu" title="Feng-hsiung Hsu">Hsu, Feng-hsiung</a> (2002). <i>Behind Deep Blue: Building the Computer that Defeated the World Chess Champion</i>. <a href="/wiki/Princeton_University_Press" title="Princeton University Press">Princeton University Press</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-691-09065-3" title="Special:BookSources/0-691-09065-3"><bdi>0-691-09065-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Behind+Deep+Blue%3A+Building+the+Computer+that+Defeated+the+World+Chess+Champion&amp;rft.pub=Princeton+University+Press&amp;rft.date=2002&amp;rft.isbn=0-691-09065-3&amp;rft.aulast=Hsu&amp;rft.aufirst=Feng-hsiung&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFLevyNewborn1991" class="citation book cs1"><a href="/wiki/David_Levy_(chess_player)" title="David Levy (chess player)">Levy, David</a>; Newborn, Monty (1991). <i>How Computers Play Chess</i>. Computer Science Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7167-8121-2" title="Special:BookSources/0-7167-8121-2"><bdi>0-7167-8121-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=How+Computers+Play+Chess&amp;rft.pub=Computer+Science+Press&amp;rft.date=1991&amp;rft.isbn=0-7167-8121-2&amp;rft.aulast=Levy&amp;rft.aufirst=David&amp;rft.au=Newborn%2C+Monty&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFCampbell1998" class="citation book cs1"><a href="/wiki/Murray_Campbell" title="Murray Campbell">Campbell, Murray</a> (1998). "An Enjoyable Game".  In Stork, D. G. (ed.). <i>HAL's Legacy: 2001's Computer as Dream and Reality</i>. Cambridge, Massachusetts: MIT Press.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=An+Enjoyable+Game&amp;rft.btitle=HAL%27s+Legacy%3A+2001%27s+Computer+as+Dream+and+Reality&amp;rft.place=Cambridge%2C+Massachusetts&amp;rft.pub=MIT+Press&amp;rft.date=1998&amp;rft.aulast=Campbell&amp;rft.aufirst=Murray&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFSyedSyed2003" class="citation journal cs1">Syed, Omar; Syed, Aamir (2003). "Arimaa – a New Game Designed to be Difficult for Computers". International Computer Games Association Journal 26: 138–139.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Arimaa+%E2%80%93+a+New+Game+Designed+to+be+Difficult+for+Computers&amp;rft.date=2003&amp;rft.aulast=Syed&amp;rft.aufirst=Omar&amp;rft.au=Syed%2C+Aamir&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li></ul>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=8" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFNewborn1997" class="citation book cs1">Newborn, Monty (1997). <i>Kasparov versus Deep Blue: Computer Chess Comes of Age</i>. <a href="/wiki/Springer_Science%2BBusiness_Media" title="Springer Science+Business Media">Springer</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-387-94820-1" title="Special:BookSources/0-387-94820-1"><bdi>0-387-94820-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Kasparov+versus+Deep+Blue%3A+Computer+Chess+Comes+of+Age&amp;rft.pub=Springer&amp;rft.date=1997&amp;rft.isbn=0-387-94820-1&amp;rft.aulast=Newborn&amp;rft.aufirst=Monty&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFKing1997" class="citation book cs1"><a href="/wiki/Daniel_King_(chess_player)" title="Daniel King (chess player)">King, Daniel</a> (1997). <i>Kasparov v. Deeper Blue: The Ultimate Man v. Machine Challenge</i>. <a href="/wiki/Batsford_(publisher)" class="mw-redirect" title="Batsford (publisher)">Batsford</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7134-8322-9" title="Special:BookSources/0-7134-8322-9"><bdi>0-7134-8322-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Kasparov+v.+Deeper+Blue%3A+The+Ultimate+Man+v.+Machine+Challenge&amp;rft.pub=Batsford&amp;rft.date=1997&amp;rft.isbn=0-7134-8322-9&amp;rft.aulast=King&amp;rft.aufirst=Daniel&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFNewborn2002" class="citation book cs1">Newborn, Monty (2002). <a rel="nofollow" class="external text" href="https://archive.org/details/springer_10.1007-978-0-387-21790-1"><i>Deep Blue</i></a>. Springer. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-387-95461-9" title="Special:BookSources/0-387-95461-9"><bdi>0-387-95461-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Deep+Blue&amp;rft.pub=Springer&amp;rft.date=2002&amp;rft.isbn=0-387-95461-9&amp;rft.aulast=Newborn&amp;rft.aufirst=Monty&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fspringer_10.1007-978-0-387-21790-1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li>
+<li><cite id="CITEREFCampbellHoaneHsu2002" class="citation journal cs1">Campbell, M.; Hoane, A. J.; Hsu, F. H. (2002). "Deep Blue". <i>Artificial Intelligence</i>. <b>134</b> (1–2): 57–59. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2FS0004-3702%2801%2900129-1">10.1016/S0004-3702(01)00129-1</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Artificial+Intelligence&amp;rft.atitle=Deep+Blue&amp;rft.volume=134&amp;rft.issue=1%E2%80%932&amp;rft.pages=57-59&amp;rft.date=2002&amp;rft_id=info%3Adoi%2F10.1016%2FS0004-3702%2801%2900129-1&amp;rft.aulast=Campbell&amp;rft.aufirst=M.&amp;rft.au=Hoane%2C+A.+J.&amp;rft.au=Hsu%2C+F.+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADeep+Blue+%28chess+computer%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.chessgames.com/perl/chessplayer?pid=29912">Deep Blue</a> player profile and games at <a href="/wiki/Chessgames.com" title="Chessgames.com">Chessgames.com</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070407074301/http://www.research.ibm.com/deepblue/">IBM.com</a>, IBM Research pages on Deep Blue</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20080701232743/http://www.research.ibm.com/deepblue/watch/html/c.shtml">IBM.com</a>, IBM page with the computer logs from the games</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20040406094751/http://www.chesscenter.com/twic/feng.html">Chesscenter.com</a>, Open letter from Feng-hsiung Hsu on the aborted rematch with Kasparov, <i><a href="/wiki/The_Week_in_Chess" title="The Week in Chess">The Week in Chess</a></i> Magazine, issue 270, 10 January 2000</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090531080948/http://www.chesscenter.com/twic/owenfeng.html">Chesscenter.com</a>, Open Letter from Owen Williams (Gary Kasparov's manager), responding to Feng-hsiung Hsu, 13 January 2000</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20050520043104/http://sjeng.org:80/ftp/deepblue.pdf">Sjeng.org</a>, Deep Blue system described by Feng-hsiung Hsu, Murray Campbell and A. Joseph Hoane Jr. (<a href="/wiki/PDF" title="PDF">PDF</a>)</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070701141111/http://www.chessclub.com/resources/articles/interview_crazybird1.html">Chessclub.com</a>, ICC Interview with Feng-Hsiung Hsu, an online interview with Hsu in 2002 (annotated)</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Chess" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Chess" title="Template:Chess"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Chess" title="Template talk:Chess"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Chess&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Chess" style="font-size:114%;margin:0 4em"><a href="/wiki/Chess" title="Chess">Chess</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Outline_of_chess" title="Outline of chess">Outline</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Chess_theory" title="Chess theory">Chess theory</a></li>
+<li><a href="/wiki/Chess_title" title="Chess title">Chess titles</a>
+<ul><li><a href="/wiki/Grandmaster_(chess)" title="Grandmaster (chess)">Grandmaster</a></li>
+<li><a href="/wiki/List_of_chess_grandmasters" title="List of chess grandmasters">list of grandmasters</a></li></ul></li>
+<li><a href="/wiki/Computer_chess" title="Computer chess">Computer chess</a>
+<ul><li><a href="/wiki/Glossary_of_computer_chess_terms" title="Glossary of computer chess terms">glossary</a></li>
+<li><a href="/wiki/Human%E2%80%93computer_chess_matches" title="Human–computer chess matches">matches</a></li>
+<li><a href="/wiki/Chess_engine" title="Chess engine">engines</a></li>
+<li><a href="/wiki/List_of_chess_software" title="List of chess software">software</a></li></ul></li>
+<li><a href="/wiki/Correspondence_chess" title="Correspondence chess">Correspondence chess</a></li>
+<li><a href="/wiki/FIDE" title="FIDE">FIDE</a></li>
+<li><a href="/wiki/Glossary_of_chess" title="Glossary of chess">Glossary</a></li>
+<li><a href="/wiki/History_of_chess" title="History of chess">History</a>
+<ul><li><a href="/wiki/Timeline_of_chess" title="Timeline of chess">timeline</a></li>
+<li><a href="/wiki/List_of_chess_games" title="List of chess games">notable games</a></li></ul></li>
+<li><a href="/wiki/Chess_rating_system" title="Chess rating system">Rating system</a>
+<ul><li><a href="/wiki/FIDE_world_rankings" title="FIDE world rankings">world rankings</a></li>
+<li><a href="/wiki/Norm_(chess)" title="Norm (chess)">norms</a></li></ul></li>
+<li><a href="/wiki/Chess_variant" title="Chess variant">Variants</a>
+<ul><li><a href="/wiki/List_of_chess_variants" title="List of chess variants">List</a></li></ul></li>
+<li><a href="/wiki/List_of_world_records_in_chess" title="List of world records in chess">World records</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_equipment" title="Chess equipment">Equipment</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Chess_set" title="Chess set">Chess set</a>
+<ul><li><a href="/wiki/Chessboard" title="Chessboard">chessboard</a></li>
+<li><a href="/wiki/Chess_piece" title="Chess piece">pieces</a></li>
+<li><a href="/wiki/King_(chess)" title="King (chess)">King</a></li>
+<li><a href="/wiki/Queen_(chess)" title="Queen (chess)">Queen</a></li>
+<li><a href="/wiki/Rook_(chess)" title="Rook (chess)">Rook</a></li>
+<li><a href="/wiki/Bishop_(chess)" title="Bishop (chess)">Bishop</a></li>
+<li><a href="/wiki/Knight_(chess)" title="Knight (chess)">Knight</a></li>
+<li><a href="/wiki/Pawn_(chess)" title="Pawn (chess)">Pawn</a></li></ul></li>
+<li><a href="/wiki/Chess_box" title="Chess box">Chess box</a></li>
+<li><a href="/wiki/Chess_clock" title="Chess clock">Chess clock</a></li>
+<li><a href="/wiki/Chess_table" title="Chess table">Chess table</a></li>
+<li><dfn id=""><a href="/wiki/Glossary_of_chess#score_sheets" title="Glossary of chess"><span title="See entry at: Glossary of chess § score sheets" style="color:inherit;" class="glossary-link">score sheets</span></a></dfn></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Rules_of_chess" title="Rules of chess">Rules</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Castling" title="Castling">Castling</a></li>
+<li><a href="/wiki/Check_(chess)" title="Check (chess)">Check</a></li>
+<li><a href="/wiki/Checkmate" title="Checkmate">Checkmate</a></li>
+<li><a href="/wiki/Draw_(chess)" title="Draw (chess)">Draw</a>
+<ul><li><a href="/wiki/Draw_by_agreement" title="Draw by agreement">by agreement</a></li>
+<li><a href="/wiki/Fifty-move_rule" title="Fifty-move rule">Fifty-move rule</a></li>
+<li><a href="/wiki/Seventy-five-move_rule" title="Seventy-five-move rule">Seventy-five-move rule</a></li>
+<li><a href="/wiki/Perpetual_check" title="Perpetual check">Perpetual check</a></li>
+<li><a href="/wiki/Stalemate" title="Stalemate">Stalemate</a></li>
+<li><a href="/wiki/Threefold_repetition" title="Threefold repetition">Threefold repetition</a></li>
+<li><a href="/wiki/Fivefold_repetition" title="Fivefold repetition">Fivefold repetition</a></li></ul></li>
+<li><i><a href="/wiki/En_passant" title="En passant">En passant</a></i></li>
+<li><a href="/wiki/Promotion_(chess)" title="Promotion (chess)">Pawn promotion</a></li>
+<li><a href="/wiki/Time_control" title="Time control">Time control</a>
+<ul><li><a href="/wiki/Fast_chess" title="Fast chess">Fast chess</a></li></ul></li>
+<li><a href="/wiki/Touch-move_rule" title="Touch-move rule">Touch-move rule</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Glossary_of_chess" title="Glossary of chess">Terms</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Blunder_(chess)" title="Blunder (chess)">Blunder</a></li>
+<li><a href="/wiki/Chess_notation" title="Chess notation">Chess notation</a>
+<ul><li><a href="/wiki/Algebraic_notation_(chess)" title="Algebraic notation (chess)">algebraic</a></li>
+<li><a href="/wiki/Descriptive_notation" title="Descriptive notation">descriptive</a></li>
+<li><a href="/wiki/Portable_Game_Notation" title="Portable Game Notation">PGN</a></li>
+<li><a href="/wiki/Chess_annotation_symbols" title="Chess annotation symbols">annotation symbols</a></li>
+<li><a href="/wiki/Chess_symbols_in_Unicode" title="Chess symbols in Unicode">symbols in Unicode</a></li></ul></li>
+<li><a href="/wiki/Fianchetto" title="Fianchetto">Fianchetto</a></li>
+<li><a href="/wiki/Gambit" title="Gambit">Gambit</a></li>
+<li><a href="/wiki/Key_square" title="Key square">Key square</a></li>
+<li><a href="/wiki/King_walk" title="King walk">King walk</a></li>
+<li>Pawns
+<ul><li><a href="/wiki/Backward_pawn" title="Backward pawn">backward</a></li>
+<li><a href="/wiki/Connected_pawns" title="Connected pawns">connected</a></li>
+<li><a href="/wiki/Doubled_pawns" title="Doubled pawns">doubled</a></li>
+<li><a href="/wiki/Isolated_pawn" title="Isolated pawn">isolated</a></li>
+<li><a href="/wiki/Mar%C3%B3czy_Bind" title="Maróczy Bind">Maróczy Bind</a></li>
+<li><a href="/wiki/Passed_pawn" title="Passed pawn">passed</a></li></ul></li>
+<li><a href="/wiki/Open_file" title="Open file">Open file</a>
+<ul><li><a href="/wiki/Half-open_file" title="Half-open file">Half-open file</a></li></ul></li>
+<li><a href="/wiki/Outpost_(chess)" title="Outpost (chess)">Outpost</a></li>
+<li><a href="/wiki/School_of_chess" title="School of chess">School</a>
+<ul><li><a href="/wiki/Romantic_chess" title="Romantic chess">romantic</a></li>
+<li><a href="/wiki/Hypermodernism_(chess)" title="Hypermodernism (chess)">hypermodern</a></li></ul></li>
+<li><a href="/wiki/Swindle_(chess)" title="Swindle (chess)">Swindle</a></li>
+<li><a href="/wiki/Tempo_(chess)" title="Tempo (chess)">Tempo</a></li>
+<li><a href="/wiki/Transposition_(chess)" title="Transposition (chess)">Transposition</a></li>
+<li><a href="/wiki/List_of_chess_traps" title="List of chess traps">Trap</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_tactic" title="Chess tactic">Tactics</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Battery_(chess)" title="Battery (chess)">Battery</a>
+<ul><li><a href="/wiki/Alekhine%27s_gun" title="Alekhine&#39;s gun">Alekhine's gun</a></li></ul></li>
+<li><a href="/wiki/Block_(chess)" title="Block (chess)">Block</a></li>
+<li><a href="/wiki/Checkmate_pattern" title="Checkmate pattern">Checkmate patterns</a></li>
+<li><a href="/wiki/Combination_(chess)" title="Combination (chess)">Combination</a></li>
+<li><a href="/wiki/Decoy_(chess)" title="Decoy (chess)">Decoy</a></li>
+<li><a href="/wiki/Deflection_(chess)" title="Deflection (chess)">Deflection</a></li>
+<li><a href="/wiki/Desperado_(chess)" title="Desperado (chess)">Desperado</a></li>
+<li><a href="/wiki/Discovered_attack" title="Discovered attack">Discovered attack</a></li>
+<li><a href="/wiki/Double_check" title="Double check">Double check</a></li>
+<li><a href="/wiki/Fork_(chess)" title="Fork (chess)">Fork</a></li>
+<li><a href="/wiki/Interference_(chess)" title="Interference (chess)">Interference</a></li>
+<li><a href="/wiki/Overloading_(chess)" title="Overloading (chess)">Overloading</a></li>
+<li><a href="/wiki/Pin_(chess)" title="Pin (chess)">Pin</a></li>
+<li><a href="/wiki/Sacrifice_(chess)" title="Sacrifice (chess)">Sacrifice</a>
+<ul><li><a href="/wiki/Queen_sacrifice" title="Queen sacrifice">Queen sacrifice</a></li></ul></li>
+<li><a href="/wiki/Skewer_(chess)" title="Skewer (chess)">Skewer</a></li>
+<li><a href="/wiki/Undermining_(chess)" title="Undermining (chess)">Undermining</a></li>
+<li><a href="/wiki/Windmill_(chess)" title="Windmill (chess)">Windmill</a></li>
+<li><a href="/wiki/X-ray_(chess)" title="X-ray (chess)">X-ray</a></li>
+<li><a href="/wiki/Zwischenzug" title="Zwischenzug">Zwischenzug</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_strategy" title="Chess strategy">Strategy</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Artificial_castling" title="Artificial castling">Artificial castling</a></li>
+<li><a href="/wiki/Compensation_(chess)" title="Compensation (chess)">Compensation</a></li>
+<li><a href="/wiki/Exchange_(chess)" title="Exchange (chess)">Exchange</a>
+<ul><li><a href="/wiki/The_exchange_(chess)" title="The exchange (chess)">the exchange</a></li></ul></li>
+<li><a href="/wiki/Initiative_(chess)" title="Initiative (chess)">Initiative</a>
+<ul><li><a href="/wiki/First-move_advantage_in_chess" title="First-move advantage in chess">first-move advantage</a></li></ul></li>
+<li><a href="/wiki/Chess_middlegame" title="Chess middlegame">Middlegame</a></li>
+<li><a href="/wiki/Pawn_storm" title="Pawn storm">Pawn storm</a></li>
+<li><a href="/wiki/Pawn_structure" title="Pawn structure">Pawn structure</a></li>
+<li><a href="/wiki/Chess_piece_relative_value" title="Chess piece relative value">Piece values</a></li>
+<li><a href="/wiki/Prophylaxis_(chess)" title="Prophylaxis (chess)">Prophylaxis</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_opening" title="Chess opening">Openings</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Flank_opening" title="Flank opening">Flank opening</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/English_Opening" title="English Opening">English Opening</a></li>
+<li><a href="/wiki/Zukertort_Opening" title="Zukertort Opening">Zukertort Opening</a>
+<ul><li><a href="/wiki/R%C3%A9ti_Opening" title="Réti Opening">Réti Opening</a></li>
+<li><a href="/wiki/King%27s_Indian_Attack" title="King&#39;s Indian Attack">King's Indian Attack</a></li></ul></li>
+<li><a href="/wiki/Larsen%27s_Opening" title="Larsen&#39;s Opening">Larsen's Opening</a></li>
+<li><a href="/wiki/Bird%27s_Opening" title="Bird&#39;s Opening">Bird's Opening</a></li>
+<li><a href="/wiki/Grob%27s_Attack" title="Grob&#39;s Attack">Grob's Attack</a></li>
+<li><a href="/wiki/Dunst_Opening" title="Dunst Opening">Dunst Opening</a></li>
+<li><a href="/wiki/King%27s_Fianchetto_Opening" title="King&#39;s Fianchetto Opening">Benko Opening</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/King%27s_Pawn_Game" title="King&#39;s Pawn Game">King's Pawn Game</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Alekhine%27s_Defence" title="Alekhine&#39;s Defence">Alekhine's Defence</a></li>
+<li><a href="/wiki/Caro%E2%80%93Kann_Defence" title="Caro–Kann Defence">Caro–Kann Defence</a></li>
+<li><a href="/wiki/French_Defence" title="French Defence">French Defence</a></li>
+<li><a href="/wiki/Modern_Defense" title="Modern Defense">Modern Defence</a></li>
+<li><a href="/wiki/Nimzowitsch_Defence" title="Nimzowitsch Defence">Nimzowitsch Defence</a></li>
+<li><a href="/wiki/Open_Game" title="Open Game">Open Game</a>
+<ul><li><a href="/wiki/Italian_Game" title="Italian Game">Italian Game</a></li>
+<li><a href="/wiki/Semi-Italian_Opening" title="Semi-Italian Opening">Semi-Italian Opening</a></li>
+<li><a href="/wiki/Giuoco_Piano" title="Giuoco Piano">Giuoco Piano</a></li>
+<li><a href="/wiki/King%27s_Gambit" title="King&#39;s Gambit">King's Gambit</a></li>
+<li><a href="/wiki/Petrov%27s_Defence" title="Petrov&#39;s Defence">Petrov's Defence</a></li>
+<li><a href="/wiki/Philidor_Defence" title="Philidor Defence">Philidor Defence</a></li>
+<li><a href="/wiki/Ruy_Lopez" title="Ruy Lopez">Ruy Lopez</a></li>
+<li><a href="/wiki/Scotch_Game" title="Scotch Game">Scotch Game</a></li></ul></li>
+<li><a href="/wiki/Owen%27s_Defence" title="Owen&#39;s Defence">Owen's Defence</a></li>
+<li><a href="/wiki/Pirc_Defence" title="Pirc Defence">Pirc Defence</a></li>
+<li><a href="/wiki/Scandinavian_Defense" title="Scandinavian Defense">Scandinavian Defense</a>
+<ul><li><a href="/wiki/Tennison_Gambit" title="Tennison Gambit">Tennison Gambit</a></li></ul></li>
+<li><a href="/wiki/Sicilian_Defence" title="Sicilian Defence">Sicilian Defence</a>
+<ul><li><a href="/wiki/Sicilian_Defence,_Alapin_Variation" title="Sicilian Defence, Alapin Variation">Alapin</a></li>
+<li><a href="/wiki/Sicilian_Defence,_Dragon_Variation" title="Sicilian Defence, Dragon Variation">Dragon</a>/<a href="/wiki/Sicilian_Defence,_Accelerated_Dragon" title="Sicilian Defence, Accelerated Dragon">Accelerated Dragon</a></li>
+<li><a href="/wiki/Sicilian_Defence,_Najdorf_Variation" title="Sicilian Defence, Najdorf Variation">Najdorf</a></li>
+<li><a href="/wiki/Sicilian_Defence,_Scheveningen_Variation" title="Sicilian Defence, Scheveningen Variation">Scheveningen</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Queen%27s_Pawn_Game" title="Queen&#39;s Pawn Game">Queen's Pawn Game</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dutch_Defence" title="Dutch Defence">Dutch Defence</a></li>
+<li><a href="/wiki/Indian_Defence" title="Indian Defence">Indian Defence</a>
+<ul><li><a href="/wiki/Benoni_Defense" title="Benoni Defense">Benoni Defence</a></li>
+<li><a href="/wiki/Modern_Benoni" title="Modern Benoni">Modern Benoni</a></li>
+<li><a href="/wiki/Bogo-Indian_Defence" title="Bogo-Indian Defence">Bogo-Indian Defence</a></li>
+<li><a href="/wiki/Gr%C3%BCnfeld_Defence" title="Grünfeld Defence">Grünfeld Defence</a></li>
+<li><a href="/wiki/King%27s_Indian_Defence" title="King&#39;s Indian Defence">King's Indian Defence</a></li>
+<li><a href="/wiki/Nimzo-Indian_Defence" title="Nimzo-Indian Defence">Nimzo-Indian Defence</a></li>
+<li><a href="/wiki/Queen%27s_Indian_Defense" title="Queen&#39;s Indian Defense">Queen's Indian Defence</a></li></ul></li>
+<li><a href="/wiki/Trompowsky_Attack" title="Trompowsky Attack">Trompowsky Attack</a></li>
+<li><a href="/wiki/London_System" title="London System">London System</a></li>
+<li><a href="/wiki/Queen%27s_Gambit" title="Queen&#39;s Gambit">Queen's Gambit</a>
+<ul><li><a href="/wiki/Queen%27s_Gambit_Accepted" title="Queen&#39;s Gambit Accepted">Accepted</a></li>
+<li><a href="/wiki/Queen%27s_Gambit_Declined" title="Queen&#39;s Gambit Declined">Declined</a></li>
+<li><a href="/wiki/Slav_Defense" title="Slav Defense">Slav Defence</a></li>
+<li><a href="/wiki/Catalan_Opening" title="Catalan Opening">Catalan Opening</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_chess_openings" title="List of chess openings">List of openings</a>
+<ul><li><a href="/wiki/Chess_opening_theory_table" title="Chess opening theory table">theory table</a></li></ul></li>
+<li><a href="/wiki/List_of_chess_gambits" title="List of chess gambits">List of chess gambits</a></li>
+<li><a href="/wiki/Irregular_chess_opening" title="Irregular chess opening">Irregular</a>
+<ul><li><a href="/wiki/Fool%27s_mate" title="Fool&#39;s mate">Fool's mate</a></li>
+<li><a href="/wiki/Scholar%27s_mate" title="Scholar&#39;s mate">Scholar's mate</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_endgame" title="Chess endgame">Endgames</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bishop_and_knight_checkmate" title="Bishop and knight checkmate">Bishop and knight checkmate</a></li>
+<li><a href="/wiki/King_and_pawn_versus_king_endgame" title="King and pawn versus king endgame">King and pawn vs king</a></li>
+<li><a href="/wiki/Opposite-colored_bishops_endgame" title="Opposite-colored bishops endgame">Opposite-coloured bishops</a></li>
+<li><a href="/wiki/Pawnless_chess_endgame" title="Pawnless chess endgame">Pawnless endgame</a></li>
+<li><a href="/wiki/Queen_and_pawn_versus_queen_endgame" title="Queen and pawn versus queen endgame">Queen and pawn vs queen</a></li>
+<li><a href="/wiki/Queen_versus_pawn_endgame" title="Queen versus pawn endgame">Queen vs pawn</a></li>
+<li><a href="/wiki/Rook_and_bishop_versus_rook_endgame" title="Rook and bishop versus rook endgame">Rook and bishop vs rook</a></li>
+<li><a href="/wiki/Rook_and_pawn_versus_rook_endgame" title="Rook and pawn versus rook endgame">Rook and pawn vs rook</a>
+<ul><li><a href="/wiki/Lucena_position" title="Lucena position">Lucena position</a></li>
+<li><a href="/wiki/Philidor_position" title="Philidor position">Philidor position</a></li></ul></li>
+<li>Strategy
+<ul><li><a href="/wiki/Fortress_(chess)" title="Fortress (chess)">fortress</a></li>
+<li><a href="/wiki/Opposition_(chess)" title="Opposition (chess)">opposition</a></li>
+<li><a href="/wiki/Tarrasch_rule" title="Tarrasch rule">Tarrasch rule</a></li>
+<li><a href="/wiki/Triangulation_(chess)" title="Triangulation (chess)">triangulation</a></li>
+<li><a href="/wiki/Zugzwang" title="Zugzwang">Zugzwang</a></li></ul></li>
+<li><a href="/wiki/Endgame_study" title="Endgame study">Study</a></li>
+<li><a href="/wiki/Endgame_tablebase" title="Endgame tablebase">Tablebase</a></li>
+<li><a href="/wiki/Two_knights_endgame" title="Two knights endgame">Two knights endgame</a></li>
+<li><a href="/wiki/Wrong_bishop" title="Wrong bishop">Wrong bishop</a></li>
+<li><a href="/wiki/Wrong_rook_pawn" title="Wrong rook pawn">Wrong rook pawn</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Chess_tournament" title="Chess tournament">Tournaments</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_strong_chess_tournaments" title="List of strong chess tournaments">List of strong chess tournaments</a></li>
+<li><a href="/wiki/Chess_Olympiad" title="Chess Olympiad">Chess Olympiad</a>
+<ul><li><a href="/wiki/Women%27s_Chess_Olympiad" title="Women&#39;s Chess Olympiad">Women</a></li></ul></li>
+<li><a href="/wiki/World_Chess_Championship" title="World Chess Championship">World Chess Championship</a>
+<ul><li><a href="/wiki/List_of_World_Chess_Championships" title="List of World Chess Championships">List</a></li>
+<li><a href="/wiki/Candidates_Tournament" title="Candidates Tournament">Candidates Tournament</a></li>
+<li><a href="/wiki/Chess_World_Cup" title="Chess World Cup">Chess World Cup</a></li>
+<li><a href="/wiki/FIDE_Grand_Prix" title="FIDE Grand Prix">FIDE Grand Prix</a></li></ul></li>
+<li>Other world championships
+<ul><li><a href="/wiki/Women%27s_World_Chess_Championship" title="Women&#39;s World Chess Championship">Women</a></li>
+<li><a href="/wiki/World_Team_Chess_Championship" title="World Team Chess Championship">Team</a></li>
+<li><a href="/wiki/World_Rapid_Chess_Championship" title="World Rapid Chess Championship">Rapid</a></li>
+<li><a href="/wiki/World_Blitz_Chess_Championship" title="World Blitz Chess Championship">Blitz</a></li>
+<li><a href="/wiki/World_Junior_Chess_Championship" title="World Junior Chess Championship">Junior</a></li>
+<li><a href="/wiki/World_Youth_Chess_Championship" title="World Youth Chess Championship">Youth</a></li>
+<li><a href="/wiki/World_Senior_Chess_Championship" title="World Senior Chess Championship">Senior</a></li>
+<li><a href="/wiki/World_Amateur_Chess_Championship" title="World Amateur Chess Championship">Amateur</a></li>
+<li><a href="/wiki/World_Championship_of_Chess_Composition" title="World Championship of Chess Composition">Chess composition</a></li>
+<li><a href="/wiki/World_Chess_Solving_Championship" title="World Chess Solving Championship">Solving</a></li>
+<li><a href="/wiki/World_Computer_Chess_Championship" title="World Computer Chess Championship">Computer chess</a></li>
+<li><a href="/wiki/World_Computer_Speed_Chess_Championship" title="World Computer Speed Chess Championship">Computer speed chess</a></li>
+<li><a href="/wiki/Top_Chess_Engine_Championship" title="Top Chess Engine Championship">Chess engine</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ca%C3%AFssa" title="Caïssa">Caïssa</a></li>
+<li><a href="/wiki/Cheating_in_chess" title="Cheating in chess">Cheating in chess</a></li>
+<li><a href="/wiki/Chess_aesthetics" title="Chess aesthetics">Chess aesthetics</a></li>
+<li><a href="/wiki/Chess_in_the_arts" title="Chess in the arts">Chess in the arts</a>
+<ul><li><a href="/wiki/Chess_in_early_literature" title="Chess in early literature">in early literature</a></li></ul></li>
+<li><a href="/wiki/List_of_chess_books" title="List of chess books">Chess books</a>
+<ul><li><a href="/wiki/Chess_opening_book" title="Chess opening book">opening books</a></li>
+<li><a href="/wiki/Chess_endgame_literature" title="Chess endgame literature">endgame literature</a></li></ul></li>
+<li><a href="/wiki/Chess_boxing" title="Chess boxing">Chess boxing</a></li>
+<li><a href="/wiki/Chess_club" title="Chess club">Chess club</a></li>
+<li><a href="/wiki/Chess_composer" title="Chess composer">Chess composer</a></li>
+<li><a href="/wiki/Chess_in_Europe" title="Chess in Europe">Chess in Europe</a>
+<ul><li><i><a href="/wiki/G%C3%B6ttingen_manuscript" title="Göttingen manuscript">Göttingen manuscript</a></i></li></ul></li>
+<li><a href="/wiki/Chess_libraries" title="Chess libraries">Chess libraries</a></li>
+<li><a href="/wiki/Category:Chess_museums" title="Category:Chess museums">Chess museums</a></li>
+<li><a href="/wiki/Chess_columns_in_newspapers" title="Chess columns in newspapers">Chess newspaper columns</a></li>
+<li><a href="/wiki/List_of_chess_periodicals" title="List of chess periodicals">Chess periodicals</a></li>
+<li><a href="/wiki/Chess_problem" title="Chess problem">Chess problem</a>
+<ul><li><a href="/wiki/Glossary_of_chess_problems" title="Glossary of chess problems">glossary</a></li>
+<li><a href="/wiki/Joke_chess_problem" title="Joke chess problem">joke chess</a></li></ul></li>
+<li><a href="/wiki/Chess_prodigy" title="Chess prodigy">Chess prodigy</a></li>
+<li><a href="/wiki/G%C3%B6kyay_Association_Chess_Museum" title="Gökyay Association Chess Museum">Gökyay Association Chess Museum</a></li>
+<li><a class="mw-selflink selflink">Deep Blue</a></li>
+<li><a href="/wiki/Dubrovnik_chess_set" title="Dubrovnik chess set">Dubrovnik chess set</a></li>
+<li><a href="/wiki/List_of_chess_players" title="List of chess players">List of chess players</a></li>
+<li><a href="/wiki/Mutilated_chessboard_problem" title="Mutilated chessboard problem">Mutilated chessboard problem</a></li>
+<li><a href="/wiki/Professional_Rapid_Online_Chess_League" title="Professional Rapid Online Chess League">PRO Chess League</a></li>
+<li><a href="/wiki/Simultaneous_exhibition" title="Simultaneous exhibition">Simultaneous exhibition</a></li>
+<li><a href="/wiki/Solving_chess" title="Solving chess">Solving chess</a></li>
+<li><a href="/wiki/Staunton_chess_set" title="Staunton chess set">Staunton chess set</a></li>
+<li><a href="/wiki/Comparison_of_top_chess_players_throughout_history" title="Comparison of top chess players throughout history">Top player comparison</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><a href="/wiki/File:Nuvola_apps_package_games_strategy.png" class="image"><img alt="Nuvola apps package games strategy.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nuvola_apps_package_games_strategy.png/28px-Nuvola_apps_package_games_strategy.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nuvola_apps_package_games_strategy.png/42px-Nuvola_apps_package_games_strategy.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nuvola_apps_package_games_strategy.png/56px-Nuvola_apps_package_games_strategy.png 2x" data-file-width="128" data-file-height="128" /></a>&#160;<a href="/wiki/Portal:Chess" title="Portal:Chess">Chess&#32;portal</a></li>
+<li><a href="/wiki/Category:Chess" title="Category:Chess">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="IBM" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="3"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IBM" title="Template:IBM"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IBM" title="Template talk:IBM"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IBM&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="IBM" style="font-size:114%;margin:0 4em"><a href="/wiki/IBM" title="IBM">IBM</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/History_of_IBM" title="History of IBM">History</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/History_of_IBM" title="History of IBM">History of IBM</a></li>
+<li><a href="/wiki/List_of_mergers_and_acquisitions_by_IBM" title="List of mergers and acquisitions by IBM">Mergers and acquisitions</a></li>
+<li><a href="/wiki/Think_(IBM)" title="Think (IBM)">Think</a> (motto)</li>
+<li><a href="/wiki/History_of_IBM_mainframe_operating_systems" title="History of IBM mainframe operating systems">Operating Systems</a></li></ul>
+</div></td><td class="noviewer navbox-image" rowspan="10" style="width:1px;padding:0px 0px 0px 2px"><div><a href="/wiki/File:IBM_logo.svg" class="image"><img alt="IBM logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/120px-IBM_logo.svg.png" decoding="async" width="120" height="48" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/180px-IBM_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png 2x" data-file-width="1000" data-file-height="400" /></a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_IBM_products" title="List of IBM products">Products</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IBM_cloud_computing" title="IBM cloud computing">IBM Cloud</a></li>
+<li><a href="/wiki/IBM_Cognos_Analytics" title="IBM Cognos Analytics">IBM Cognos Analytics</a></li>
+<li><a href="/wiki/IBM_Planning_Analytics" title="IBM Planning Analytics">IBM Planning Analytics</a></li>
+<li><a href="/wiki/Watson_(computer)" title="Watson (computer)">Watson</a></li>
+<li><a href="/wiki/Cell_(microprocessor)" title="Cell (microprocessor)">Cell microprocessor</a></li>
+<li><a href="/wiki/IBM_Power_Systems" title="IBM Power Systems">Power Systems</a></li>
+<li><a href="/wiki/IBM_Personal_Computer" title="IBM Personal Computer">Personal Computer</a></li>
+<li><a href="/wiki/IBM_mainframe" title="IBM mainframe">Mainframe</a></li>
+<li><a href="/wiki/IBM_Information_Management_Software" title="IBM Information Management Software">Information Management Software</a></li>
+<li><a href="/wiki/Lotus_Software" title="Lotus Software">Lotus Software</a></li>
+<li><a href="/wiki/Rational_Software" title="Rational Software">Rational Software</a></li>
+<li><a href="/wiki/SPSS" title="SPSS">SPSS</a></li>
+<li><a href="/wiki/ILOG" title="ILOG">ILOG</a></li>
+<li><a href="/wiki/Tivoli_Software" title="Tivoli Software">Tivoli Software</a>: <a href="/wiki/Tivoli_Service_Automation_Manager" title="Tivoli Service Automation Manager">Service Automation Manager</a></li>
+<li><a href="/wiki/IBM_WebSphere" title="IBM WebSphere">WebSphere</a></li>
+<li><a href="/wiki/AlphaWorks" class="mw-redirect" title="AlphaWorks">alphaWorks</a></li>
+<li><a href="/wiki/Criminal_Reduction_Utilising_Statistical_History" title="Criminal Reduction Utilising Statistical History">Criminal Reduction Utilising Statistical History</a></li>
+<li><a href="/wiki/IBM_Mashup_Center" title="IBM Mashup Center">Mashup Center</a></li>
+<li><a href="/wiki/IBM_PureQuery" class="mw-redirect" title="IBM PureQuery">PureQuery</a></li>
+<li><a href="/wiki/IBM_Redbooks" title="IBM Redbooks">Redbooks</a></li>
+<li><a href="/wiki/IBM_FlashSystem" title="IBM FlashSystem">FlashSystem</a></li>
+<li><a href="/wiki/Fortran" title="Fortran">Fortran</a></li>
+<li><a href="/wiki/IBM_Connections" class="mw-redirect" title="IBM Connections">Connections</a></li>
+<li><a href="/wiki/IBM_Q_System_One" title="IBM Q System One">Q System One</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Business entities</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IBM_Center_for_The_Business_of_Government" title="IBM Center for The Business of Government">Center for The Business of Government</a></li>
+<li><a href="/wiki/IBM_Global_Services" title="IBM Global Services">Global Services</a></li>
+<li><a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a></li>
+<li><a href="/wiki/List_of_international_subsidiaries_of_IBM" title="List of international subsidiaries of IBM">International subsidiaries</a></li>
+<li><a href="/wiki/IBM_jStart" title="IBM jStart">jStart</a></li>
+<li><a href="/wiki/IBM_Research" title="IBM Research">Research</a></li>
+<li><a href="/wiki/The_Weather_Company" title="The Weather Company">The Weather Company</a> (<a href="/wiki/Weather_Underground_(weather_service)" title="Weather Underground (weather service)">Weather Underground</a>)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Facilities</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Towers
+<ul><li><a href="/wiki/1250_Ren%C3%A9-L%C3%A9vesque" title="1250 René-Lévesque">1250 René-Lévesque, Montreal, QC</a></li>
+<li><a href="/wiki/One_Atlantic_Center" title="One Atlantic Center">One Atlantic Center, Atlanta, GA</a></li></ul></li>
+<li>Software Labs
+<ul><li><a href="/wiki/IBM_Rome_Software_Lab" title="IBM Rome Software Lab">Rome Software Lab</a></li>
+<li><a href="/wiki/IBM_Toronto_Software_Lab" title="IBM Toronto Software Lab">Toronto Software Lab</a></li></ul></li>
+<li>IBM Buildings
+<ul><li><a href="/wiki/330_North_Wabash" title="330 North Wabash">330 North Wabash, Chicago, IL</a></li>
+<li><a href="/wiki/IBM_Building,_Johannesburg" title="IBM Building, Johannesburg">Johannesburg</a></li>
+<li><a href="/wiki/IBM_Building_(Seattle)" title="IBM Building (Seattle)">Seattle</a></li></ul></li>
+<li>Facilities
+<ul><li><a href="/wiki/Thomas_J._Watson_Research_Center" title="Thomas J. Watson Research Center">Thomas J. Watson Research Center</a></li>
+<li><a href="/wiki/IBM_Hakozaki_Facility" title="IBM Hakozaki Facility">Hakozaki Facility</a></li>
+<li><a href="/wiki/IBM_Yamato_Facility" title="IBM Yamato Facility">Yamato Facility</a></li></ul></li>
+<li><a href="/wiki/Cambridge_Scientific_Center" title="Cambridge Scientific Center">Cambridge Scientific Center</a></li>
+<li><a href="/wiki/IBM_Hursley" title="IBM Hursley">IBM Hursley</a></li>
+<li><a href="/wiki/IBM_Canada_Head_Office_Building" title="IBM Canada Head Office Building">Canada Head Office Building</a></li>
+<li><a href="/wiki/IBM_Rochester" title="IBM Rochester">IBM Rochester</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Initiatives</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IBM_Academy_of_Technology" title="IBM Academy of Technology">Academy of Technology</a></li>
+<li><a href="/wiki/IBM_Deep_Thunder" title="IBM Deep Thunder">Deep Thunder</a></li>
+<li><a href="/wiki/IBM_Fellow" title="IBM Fellow">IBM Fellow</a></li>
+<li><a href="/wiki/IBM%27s_The_Great_Mind_Challenge" title="IBM&#39;s The Great Mind Challenge">The Great Mind Challenge</a></li>
+<li><a href="/wiki/IBM_Developer" title="IBM Developer">Developer</a>: <a href="/wiki/Develothon" title="Develothon">Develothon</a></li>
+<li><a href="/wiki/Linux_Technology_Center" title="Linux Technology Center">Linux Technology Center</a></li>
+<li><a href="/wiki/IBM_Virtual_Universe_Community" title="IBM Virtual Universe Community">IBM Virtual Universe Community</a></li>
+<li><a href="/wiki/Smarter_Planet" title="Smarter Planet">Smarter Planet</a></li>
+<li><a href="/wiki/World_Community_Grid" title="World Community Grid">World Community Grid</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Inventions</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Automated_teller_machine" title="Automated teller machine">Automated teller machine</a></li>
+<li><a href="/wiki/Keypunch" title="Keypunch">Electronic keypunch</a></li>
+<li><a href="/wiki/Hard_disk_drive" title="Hard disk drive">Hard disk drive</a></li>
+<li><a href="/wiki/Floppy_disk" title="Floppy disk">Floppy disk</a></li>
+<li><a href="/wiki/Dynamic_random-access_memory" title="Dynamic random-access memory">DRAM</a></li>
+<li><a href="/wiki/Relational_model" title="Relational model">Relational model</a></li>
+<li><a href="/wiki/IBM_Selectric_typewriter" title="IBM Selectric typewriter">Selectric typewriter</a></li>
+<li><a href="/wiki/Swap_(finance)" title="Swap (finance)">Financial swaps</a></li>
+<li><a href="/wiki/Universal_Product_Code" title="Universal Product Code">Universal Product Code</a></li>
+<li><a href="/wiki/Magnetic_stripe_card" title="Magnetic stripe card">Magnetic stripe card</a></li>
+<li><a href="/wiki/Sabre_(computer_system)" title="Sabre (computer system)">Sabre airline reservation system</a></li>
+<li><a href="/wiki/Scanning_tunneling_microscope" title="Scanning tunneling microscope">Scanning tunneling microscope</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Terminology</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Globally_integrated_enterprise" title="Globally integrated enterprise">Globally integrated enterprise</a></li>
+<li><a href="/wiki/Commercial_Processing_Workload" class="mw-redirect" title="Commercial Processing Workload">Commercial Processing Workload</a></li>
+<li><a href="/wiki/Consumability" title="Consumability">Consumability</a></li>
+<li><a href="/wiki/Electronic_business" title="Electronic business">e-business</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">CEOs</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Thomas_J._Watson" title="Thomas J. Watson">Thomas J. Watson</a> (1914–1956)</li>
+<li><a href="/wiki/Thomas_Watson_Jr." class="mw-redirect" title="Thomas Watson Jr.">Thomas Watson Jr.</a> (1956–1971)</li>
+<li><a href="/wiki/T._Vincent_Learson" title="T. Vincent Learson">T. Vincent Learson</a> (1971–1973)</li>
+<li><a href="/wiki/Frank_T._Cary" title="Frank T. Cary">Frank T. Cary</a> (1973–1981)</li>
+<li><a href="/wiki/John_R._Opel" title="John R. Opel">John R. Opel</a> (1981–1985)</li>
+<li><a href="/wiki/John_Fellows_Akers" title="John Fellows Akers">John Fellows Akers</a> (1985–1993)</li>
+<li><a href="/wiki/Louis_V._Gerstner_Jr." title="Louis V. Gerstner Jr.">Louis V. Gerstner Jr.</a> (1993–2002)</li>
+<li><a href="/wiki/Samuel_J._Palmisano" title="Samuel J. Palmisano">Samuel J. Palmisano</a> (2002–2011)</li>
+<li><a href="/wiki/Ginni_Rometty" title="Ginni Rometty">Ginni Rometty</a> (2012–2020)</li>
+<li><a href="/wiki/Arvind_Krishna" title="Arvind Krishna">Arvind Krishna</a> (2020–present)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Board of directors</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Michael_L._Eskew" title="Michael L. Eskew">Michael L. Eskew</a></li>
+<li><a href="/wiki/David_Farr" title="David Farr">David Farr</a></li>
+<li><a href="/wiki/Alex_Gorsky" title="Alex Gorsky">Alex Gorsky</a></li>
+<li><a href="/wiki/Michelle_Howard" title="Michelle Howard">Michelle J. Howard</a></li>
+<li><a href="/wiki/Arvind_Krishna" title="Arvind Krishna">Arvind Krishna</a></li>
+<li><a href="/wiki/Andrew_N._Liveris" title="Andrew N. Liveris">Andrew N. Liveris</a></li>
+<li><a href="/wiki/Martha_E._Pollack" title="Martha E. Pollack">Martha E. Pollack</a></li>
+<li><a href="/wiki/Ginni_Rometty" title="Ginni Rometty">Virginia M. Rometty</a></li>
+<li><a href="/wiki/Joseph_R._Swedish" title="Joseph R. Swedish">Joseph R. Swedish</a></li>
+<li><a href="/wiki/Sidney_Taurel" title="Sidney Taurel">Sidney Taurel</a></li>
+<li><a href="/wiki/Peter_Voser" title="Peter Voser">Peter R. Voser</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><i><a href="/wiki/A_Boy_and_His_Atom" title="A Boy and His Atom">A Boy and His Atom</a></i></li>
+<li><a href="/wiki/Common_Public_License" title="Common Public License">Common Public License</a>/<a href="/wiki/IBM_Public_License" title="IBM Public License">IBM Public License</a></li>
+<li><a href="/wiki/Customer_engineer" title="Customer engineer">Customer engineer</a></li>
+<li><a class="mw-selflink selflink">Deep Blue</a></li>
+<li><a href="/wiki/Deep_Thought_(chess_computer)" title="Deep Thought (chess computer)">Deep Thought</a></li>
+<li><a href="/wiki/Dynamic_infrastructure" title="Dynamic infrastructure">Dynamic infrastructure</a></li>
+<li><a href="/wiki/GUIDE_International" title="GUIDE International">GUIDE International</a></li>
+<li><i><a href="/wiki/IBM_and_the_Holocaust" title="IBM and the Holocaust">IBM and the Holocaust</a></i></li>
+<li><a href="/wiki/IBM_international_chess_tournament" title="IBM international chess tournament">IBM international chess tournament</a></li>
+<li><a href="/wiki/Lucifer_(cipher)" title="Lucifer (cipher)">Lucifer cipher</a></li>
+<li><a href="/wiki/Mathematica:_A_World_of_Numbers..._and_Beyond" title="Mathematica: A World of Numbers... and Beyond">Mathematica</a></li>
+<li><a href="/wiki/IBM_Plex" title="IBM Plex">IBM Plex</a></li>
+<li><a href="/wiki/SHARE_(computing)" title="SHARE (computing)">SHARE computing</a></li>
+<li><a href="/wiki/ScicomP" title="ScicomP">ScicomP</a></li>
+<li><a href="/wiki/IBM_Q_Experience" title="IBM Q Experience">Q Experience</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q187899#identifiers&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q187899#identifiers&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q187899#identifiers" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/LCCN_(identifier)" class="mw-redirect" title="LCCN (identifier)">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh97006015">sh97006015</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw2230
+Cached time: 20200922165153
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.700 seconds
+Real time usage: 0.854 seconds
+Preprocessor visited node count: 2560/1000000
+Post‐expand include size: 148859/2097152 bytes
+Template argument size: 746/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 159454/5000000 bytes
+Lua time usage: 0.337/10.000 seconds
+Lua memory usage: 5.82 MB/50 MB
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  649.074      1 -total
+ 52.14%  338.425      1 Template:Reflist
+ 18.23%  118.310      8 Template:Cite_news
+ 11.19%   72.631     14 Template:Cite_web
+ 10.21%   66.249     13 Template:Cite_book
+  9.78%   63.467      1 Template:Short_description
+  7.43%   48.227      3 Template:Navbox
+  6.80%   44.145      1 Template:Authority_control
+  6.48%   42.029      1 Template:Chess
+  5.76%   37.361      1 Template:Pagetype
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:49387-0!canonical and timestamp 20200922165152 and revision id 976531076
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Deep_Blue_(chess_computer)&amp;oldid=976531076">https://en.wikipedia.org/w/index.php?title=Deep_Blue_(chess_computer)&amp;oldid=976531076</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:History_of_chess" title="Category:History of chess">History of chess</a></li><li><a href="/wiki/Category:Chess_computers" title="Category:Chess computers">Chess computers</a></li><li><a href="/wiki/Category:One-of-a-kind_computers" title="Category:One-of-a-kind computers">One-of-a-kind computers</a></li><li><a href="/wiki/Category:IBM_supercomputers" title="Category:IBM supercomputers">IBM supercomputers</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_unfit_url" title="Category:CS1 maint: unfit url">CS1 maint: unfit url</a></li><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_May_2017" title="Category:Use dmy dates from May 2017">Use dmy dates from May 2017</a></li><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Deep+Blue+%28chess+computer%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Deep+Blue+%28chess+computer%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Deep_Blue_(chess_computer)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Deep_Blue_(chess_computer)" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Deep_Blue_(chess_computer)">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Deep_Blue_(chess_computer)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Deep_Blue_(chess_computer)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;oldid=976531076" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Deep_Blue_%28chess_computer%29&amp;id=976531076&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q187899" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Deep_Blue_%28chess_computer%29&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Deep_Blue_(chess_computer)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Deep_Blue" hreflang="en">Wikimedia Commons</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AF%D9%8A%D8%A8_%D8%A8%D9%84%D9%88" title="ديب بلو – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%A1%E0%A7%80%E0%A6%AA_%E0%A6%AC%E0%A7%8D%E0%A6%B2%E0%A7%81" title="ডীপ ব্লু – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-tarask.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/Deep_blue" title="Deep blue – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Deep_Blue_(computadora)" title="Deep Blue (computadora) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AF%DB%8C%D9%BE_%D8%A8%D9%84%D9%88" title="دیپ بلو – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Deep_Blue_(computadora)" title="Deep Blue (computadora) – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%94%A5_%EB%B8%94%EB%A3%A8" title="딥 블루 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B4%D5%AB%D6%83_%D4%B2%D5%AC%D5%B8%D6%82" title="Դիփ Բլու – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/IBM_Deep_Blue" title="IBM Deep Blue – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9B%D7%97%D7%95%D7%9C_%D7%A2%D7%9E%D7%95%D7%A7" title="כחול עמוק – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-jv"><a href="https://jv.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Javanese" lang="jv" hreflang="jv" class="interlanguage-link-target">Jawa</a></li><li class="interlanguage-link interwiki-kn"><a href="https://kn.wikipedia.org/wiki/%E0%B2%A1%E0%B3%80%E0%B2%AA%E0%B3%8D_%E0%B2%AC%E0%B3%8D%E0%B2%B2%E0%B3%82" title="ಡೀಪ್ ಬ್ಲೂ – Kannada" lang="kn" hreflang="kn" class="interlanguage-link-target">ಕನ್ನಡ</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/Deep_Blue_(%D1%88%D0%B0%D1%85%D0%BC%D0%B0%D1%82_%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D1%96)" title="Deep Blue (шахмат компьютері) – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/IBM_Deep_Blue" title="IBM Deep Blue – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%A1%E0%B5%80%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D_%E0%B4%AC%E0%B5%8D%E0%B4%B2%E0%B5%82" title="ഡീപ്പ് ബ്ലൂ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mr"><a href="https://mr.wikipedia.org/wiki/%E0%A4%A1%E0%A5%80%E0%A4%AA_%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A5%81_(%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A4%A3%E0%A4%95)" title="डीप ब्ल्यु (महासंगणक) – Marathi" lang="mr" hreflang="mr" class="interlanguage-link-target">मराठी</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Deep_Blue_(komputer_catur)" title="Deep Blue (komputer catur) – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%BB%E3%83%96%E3%83%AB%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ディープ・ブルー (コンピュータ) – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro badge-Q17437798 badge-goodarticle" title="good article badge"><a href="https://ro.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Deep_Blue_(chess_computer)" title="Deep Blue (chess computer) – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/IBM_Deep_Blue" title="IBM Deep Blue – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Deep_Blue_(schackdator)" title="Deep Blue (schackdator) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%94%E0%B8%B5%E0%B8%9B%E0%B8%9A%E0%B8%A5%E0%B8%B9" title="ดีปบลู – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Deep_Blue" title="Deep Blue – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E6%B7%B1%E8%93%9D_(%E8%B6%85%E7%BA%A7%E8%AE%A1%E7%AE%97%E6%9C%BA)" title="深蓝 (超级计算机) – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E8%97%8D_(%E8%B6%85%E7%B4%9A%E9%9B%BB%E8%85%A6)" title="深藍 (超級電腦) – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q187899#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 3 September 2020, at 13:20<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Deep_Blue_(chess_computer)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.700","walltime":"0.854","ppvisitednodes":{"value":2560,"limit":1000000},"postexpandincludesize":{"value":148859,"limit":2097152},"templateargumentsize":{"value":746,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":159454,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  649.074      1 -total"," 52.14%  338.425      1 Template:Reflist"," 18.23%  118.310      8 Template:Cite_news"," 11.19%   72.631     14 Template:Cite_web"," 10.21%   66.249     13 Template:Cite_book","  9.78%   63.467      1 Template:Short_description","  7.43%   48.227      3 Template:Navbox","  6.80%   44.145      1 Template:Authority_control","  6.48%   42.029      1 Template:Chess","  5.76%   37.361      1 Template:Pagetype"]},"scribunto":{"limitreport-timeusage":{"value":"0.337","limit":"10.000"},"limitreport-memusage":{"value":6106969,"limit":52428800},"limitreport-logs":"table#1 {\n}\n"},"cachereport":{"origin":"mw2230","timestamp":"20200922165153","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Deep Blue (chess computer)","url":"https:\/\/en.wikipedia.org\/wiki\/Deep_Blue_(chess_computer)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q187899","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q187899","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-04-17T05:44:33Z","dateModified":"2020-09-03T13:20:46Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/52\/Chess_Programming.svg","headline":"supercomputer"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":176,"wgHostname":"mw2258"});});</script>
+</body></html>
