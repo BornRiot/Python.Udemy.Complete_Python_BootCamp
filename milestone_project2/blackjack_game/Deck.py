@@ -1,10 +1,11 @@
-# New Lecture topic starts here: Creating Deck Class
-# Vide Demonstrates how to create the deck class for the game War in python
-# Look into a possible shuffle package in java
-from Card import *
-import random
+"""
+This module will be used to simulate the Deck of cards that will be used in the game. \
+The Deck consists of 52 cards with four different suits.
+"""
 
-
+import random # Look into a possible shuffle package in java
+from milestone_project2.blackjack_game.Card import *
+# Implementation of the Deck Class
 class Deck:
     def __init__(self):
         self.all_cards = []
@@ -24,3 +25,5 @@ class Deck:
         return self.all_cards.pop()
 
 
+test_deck = Deck()
+print(test_deck)
