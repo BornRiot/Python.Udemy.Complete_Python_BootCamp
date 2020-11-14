@@ -25,5 +25,3 @@ class Deck:
         return self.all_cards.pop()
 
 
-test_deck = Deck()
-print(test_deck)
