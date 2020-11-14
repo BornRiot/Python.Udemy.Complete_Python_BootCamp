@@ -3,40 +3,32 @@ This module will be ued for the Hand class of the game and hold the carious meth
 needed to carry out the sewuence of game events.
 """
 from milestone_project2.blackjack_game.Deck import *
+from milestone_project2.blackjack_game.Card import *
+
 class Hand:
 
     def __init__(self):
-        self.cards = []
-        self.value = 0
-        self.aces = 0
+        self.cards = []  # start with an empty list as we did in the Deck class
+        self.value = 0   # start with zero value
+        self.aces = 0    # add an attribute to keep track of aces
 
+    def add_card(self,card):
+        # Code Implementation solves the issue with
+        # adjusting for aces and calculating card values in hand
+        self.cards.append(card)
+        self.value += values[card.rank]
+        if card.rank == 'Ace':
+            self.aces += 1  # add to self.aces
 
-
-
-    def add_cards(self, card):
-        if type(card) == type([]):
-            # Get a list of multi card objects
-            self.cards.extend(card)
-        else:
-            self.cards.append(card)
-
-    def adjust_for_ace(self): # Function needs to be improved
-        for card in self.cards:
-            self.value += card.value
-            if "Ace" in card.rank:
-                return self.cards.index(card,0,)
-    def get_values(self):
-        for card  in self.cards:
-            self.value += card.value
+    def adjust_for_ace(self):
+        while self.value > 21 and self.aces:
+            self.value -= 10
+            self.aces -= 1
 
 
 
 
 
-
-
-    def __str__(self):
-        return f'Hand {self.name} has {len(self.all_cards)} cards and {self.bankroll} in his bankroll.'
 
 
 the_deck = Deck()
@@ -45,8 +37,7 @@ drawn_card = the_deck.deal_one()
 drawn_card2  = the_deck.deal_one()
 
 player_hand = Hand()
-player_hand.add_cards([drawn_card, drawn_card2])
-for card in player_hand.cards:
-    print(card.rank, card.value)
-player_hand.get_values()
-print(player_hand.value)
+player_hand.add_card(drawn_card)
+player_hand.add_card(drawn_card2)
+print(drawn_card.rank)
+
