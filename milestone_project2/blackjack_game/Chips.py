@@ -34,7 +34,3 @@ class Chips:
             print("Hand has placed a bet in the amount of: ", self.bet)
 
 
-new_chip = Chips()
-new_chip.take_bets()
-new_chip.lose_bet()
-print(new_chip.total)
