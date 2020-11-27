@@ -23,5 +23,3 @@ class Deck:
     # Create a method to deal one card from the deck of cards
     def deal_one(self):
         return self.all_cards.pop()
-
-

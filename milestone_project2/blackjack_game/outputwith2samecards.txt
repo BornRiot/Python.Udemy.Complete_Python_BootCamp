@@ -1,0 +1,31 @@
+Please enter buy-in amount for table: 100
+Ace of Spades
+Queen of Clubs
+For a total value of:  21
+
+Queen of Diamonds
+For a total value of:  10
+Do you want to hit or stand: hit
+Do you want to hit or stand: hit
+Ace of Spades
+Queen of Clubs
+Five of Spades
+For a total value of:  16
+
+Queen of Diamonds
+Queen of Diamonds
+For a total value of:  16
+The line below shows all cards
+The player is showing:
+Ace of Spades
+Queen of Clubs
+Five of Spades
+For a total value of:  16
+
+The Dealer is showing:
+Queen of Diamonds
+Six of Hearts
+For a total value of:  16
+Dealer value:  16
+
+Process finished with exit code 0

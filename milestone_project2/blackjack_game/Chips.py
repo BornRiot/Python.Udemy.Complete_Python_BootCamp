@@ -9,7 +9,6 @@ the betting, holding and rewarding of chips to  the player or dealer after each 
 # https://bit.ly/32FpZnN
 # https://bit.ly/3p9q10r
 
-
 class Chips:
     def __init__(self):
         # Hand Bankroll and Bet
@@ -23,14 +22,3 @@ class Chips:
     def lose_bet(self):
         self.total -= self.bet
         self.bet = 0
-
-    def take_bets(self):
-        self.bet = int(input("Hand, please enter a bet amount: "))
-        if self.bet > self.total:
-            print("Bet Exceeds Bankroll")
-            print("Hand Bet:", self.bet, "Hand Bankroll:", self.total)
-            exit(0)
-        else:
-            print("Hand has placed a bet in the amount of: ", self.bet)
-
-
