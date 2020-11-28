@@ -12,25 +12,6 @@ def hit(deck, hand):
     hand.adjust_for_ace()
 
 
-def hit_or_stand(deck, hand):
-    global playing  # to control an upcoming while loop
-
-    while True:
-        x = input("Would you like to Hit or Stand? Enter 'h' or 's' ")
-
-        if x[0].lower() == 'h':
-            hit(deck, hand)  # hit() function defined above
-
-        elif x[0].lower() == 's':
-            print("Player stands. Dealer is playing.")
-            playing = False
-
-        else:
-            print("Sorry, please try again.")
-            continue
-        break
-
-
 def take_bets(chips):
     chips.bet = int(input("Player, please enter a bet amount: "))
     if chips.bet > chips.total:
